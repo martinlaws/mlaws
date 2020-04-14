@@ -2,9 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import { useTheme } from "../hooks/theme-context"
 import styled from "styled-components"
+import Emoji from "./emoji"
 
 function Splash() {
   const [theme] = useTheme()
+
   const {
     fontPrimary,
     fontSecondary,
@@ -19,6 +21,10 @@ function Splash() {
     flex-flow: column nowrap;
     margin: 1rem 0.5rem;
     color: ${fontPrimary};
+
+    .padded-bottom {
+      margin-bottom: 2rem;
+    }
   `
 
   const H1 = styled.h1`
@@ -31,6 +37,7 @@ function Splash() {
     color: ${fontSecondary};
     font-family: "IBM Plex Sans", sanserif;
     font-style: italic;
+    margin-bottom: 0.25rem;
   `
 
   const CTALink = styled(Link)`
@@ -83,12 +90,9 @@ function Splash() {
     <>
       <Main>
         <P>
-          Hi, I'm Martin{" "}
-          <span role="img" aria-labelledby="waving hand">
-            👋
-          </span>
+          Hi, I'm Martin <Emoji symbol="👋" label="waving hand" />
         </P>
-        <H1>Senior UX Developer and proud dog dad</H1>
+        <H1 className="padded-bottom">Senior UX Developer and proud dog dad</H1>
         <P>
           Thrilled to be the new guy at{" "}
           <InlineLink
@@ -118,15 +122,16 @@ function Splash() {
           </InlineLink>
           .
         </P>
-        <P>
+        <P className="padded-bottom">
           Wannabe chef, extremely competitive fantasy{" "}
           <InlineLink
             href="https://www.fantasysurvivorgame.com/"
             target="_blank"
           >
-            Survivor™️
+            Survivor
+            <Emoji symbol="™" label="Trademark symbol" />
           </InlineLink>{" "}
-          player, and all-around 💩 disturber.
+          player, and all-around <Emoji symbol="💩" label="shit" /> disturber.
         </P>
         <div>
           <CTALink to="/work/">SEE MY WORK</CTALink>

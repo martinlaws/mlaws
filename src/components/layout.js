@@ -11,15 +11,15 @@ import PropTypes from "prop-types"
 import { ThemeProvider } from "../hooks/theme-context"
 import TwoColumnLayout from "./two-column-layout"
 import "./layout.css"
-import favicon from "../images/favicon.ico"
-import Helmet from "react-helmet"
+// import favicon from "../images/favicon.png"
+// import Helmet from "react-helmet"
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider>
-      <Helmet>
+      {/* <Helmet>
         <link rel="icon" href={favicon} />
-      </Helmet>
+      </Helmet> */}
       <div
         style={{
           display: `flex`,

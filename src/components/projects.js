@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "./layout"
-import SEO from "./seo"
+// import Layout from "./layout"
+// import SEO from "./seo"
 import styled from "styled-components"
 
 import { useTheme } from "../hooks/theme-context"
@@ -14,8 +14,8 @@ const Projects = () => {
     fontPrimary,
     fontSecondary,
     linkPrimary,
-    accentPrimary,
-    accentSecondary,
+    // accentPrimary,
+    // accentSecondary,
     other,
   } = theme.palette
   const Main = styled.main`
@@ -61,27 +61,27 @@ const Projects = () => {
     }
   `
 
-  const InlineLink = styled.a`
-    color: ${accentPrimary};
-    font-family: "IBM Plex Sans", serif;
-    font-weight: 600;
-    text-decoration: none;
-    padding-top: 3px;
-    border-style: solid;
-    border-width: 0px 0px 2px;
-    border-color: transparent;
-    line-height: 1.4em;
-    transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+  // const InlineLink = styled.a`
+  //   color: ${accentPrimary};
+  //   font-family: "IBM Plex Sans", serif;
+  //   font-weight: 600;
+  //   text-decoration: none;
+  //   padding-top: 3px;
+  //   border-style: solid;
+  //   border-width: 0px 0px 2px;
+  //   border-color: transparent;
+  //   line-height: 1.4em;
+  //   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
-    &.accent {
-      color: ${accentSecondary};
-    }
+  //   &.accent {
+  //     color: ${accentSecondary};
+  //   }
 
-    &:hover {
-      color: ${linkPrimary};
-      border-color: ${other};
-    }
-  `
+  //   &:hover {
+  //     color: ${linkPrimary};
+  //     border-color: ${other};
+  //   }
+  // `
   return (
     <Main>
       <H1>Selected projects</H1>

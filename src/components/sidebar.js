@@ -63,6 +63,7 @@ const Sidebar = ({ siteTitle }) => {
     line-height: 1.4em;
     text-transform: uppercase;
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+    width: max-content;
 
     &:hover {
       color: ${other};

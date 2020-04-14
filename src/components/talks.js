@@ -1,19 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
-
-// import Layout from "./layout"
-// import SEO from "./seo"
 import styled from "styled-components"
-
+// import { useStaticQuery, graphql } from "gatsby"
+import Table from "./table"
+// import SEO from "./seo"
 import { useTheme } from "../hooks/theme-context"
 
-const Beans = () => {
+const Talks = () => {
   const [theme] = useTheme()
+
+  // const { site } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       site {
+  //         talks {
+  //           title
+  //           date
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
+
+  // const metaDescription = description || site.siteMetadata.description
 
   const {
     fontPrimary,
-    fontSecondary,
     linkPrimary,
+    // fontSecondary,
+    // sidebarBg,
     // accentPrimary,
     // accentSecondary,
     other,
@@ -30,15 +45,11 @@ const Beans = () => {
     color: ${fontPrimary};
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
-  `
-
-  const P = styled.p`
-    color: ${fontSecondary};
-    font-family: "IBM Plex Sans", sanserif;
-    font-style: italic;
+    margin-bottom: 0;
   `
 
   const CTALink = styled(Link)`
+    width: max-content;
     color: ${linkPrimary};
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
@@ -83,13 +94,40 @@ const Beans = () => {
   //     border-color: ${other};
   //   }
   // `
+
+  const site = {
+    talks: [
+      {
+        title: "Weekly lectures @ Lighthouse Labs",
+        date: "January 2016-Present",
+        path: "/writing/high-tide-low-tide/",
+      },
+      {
+        title: "Remote 101: How to facilitate kick-ass remote technical work",
+        date: "March 2020",
+        path: "/writing/design-thinking-for-developers/",
+      },
+      {
+        title: "Design Thinking for Developers",
+        date: "January 2020",
+        path: "/writing/design-thinking-for-developers/",
+      },
+      {
+        title: "InVision DSM",
+        date: "November 2019",
+        path: "/writing/invision-dsm/",
+      },
+    ],
+  }
+
   return (
     <Main>
-      <H1>Beans</H1>
-      <P>Beans coming soon</P>
+      <H1>Selected speaking</H1>
+
+      <Table data={site.talks} />
       <CTALink to="/">Go back to the homepage</CTALink>
     </Main>
   )
 }
 
-export default Beans
+export default Talks

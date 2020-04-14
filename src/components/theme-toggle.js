@@ -6,21 +6,8 @@ import { useTheme } from "../hooks/theme-context"
 function ThemeToggle() {
   const [theme, dispatch] = useTheme()
 
-  const toggleTheme = event => {
-    event.preventDefault()
-
-    const newTheme = theme.name === "dark" ? "light" : "dark"
-
-    console.log(newTheme)
-
+  const setTheme = newTheme =>
     dispatch({ type: `SET_THEME`, themeName: newTheme })
-  }
-
-  const resetTheme = event => {
-    event.preventDefault()
-
-    dispatch({ type: `SET_THEME`, themeName: "synthWave84" })
-  }
 
   const { accentSecondary, accentPrimary, fontSecondary } = theme.palette
 
@@ -59,9 +46,30 @@ function ThemeToggle() {
   return (
     <ThemeOptionContainer>
       <P>Themes:</P>
-      <ThemeOption onClick={toggleTheme}>[Dark]</ThemeOption>
-      <ThemeOption onClick={toggleTheme}>[Light]</ThemeOption>
-      <ThemeOption onClick={resetTheme}>[SynthWave '84]</ThemeOption>
+      <ThemeOption
+        onClick={e => {
+          e.preventDefault()
+          setTheme("dark")
+        }}
+      >
+        [Dark]
+      </ThemeOption>
+      <ThemeOption
+        onClick={e => {
+          e.preventDefault()
+          setTheme("light")
+        }}
+      >
+        [Light]
+      </ThemeOption>
+      <ThemeOption
+        onClick={e => {
+          e.preventDefault()
+          setTheme("synthWave84")
+        }}
+      >
+        [SynthWave '84]
+      </ThemeOption>
     </ThemeOptionContainer>
   )
 }

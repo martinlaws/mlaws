@@ -21,15 +21,20 @@ function TwoColumnLayout({ children }) {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding: 0 5rem;
+    padding: 5rem;
+    overflow-y: scroll auto;
   `
 
   const TwoColumnGrid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr;
     min-height: 100vh;
     width: 100vw;
     background-color: ${theme.palette.contentBg};
+
+    @media only screen and (min-width: 796px) {
+      grid-template-columns: 280px auto;
+    }
   `
 
   const { title } = data.site.siteMetadata
