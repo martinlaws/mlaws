@@ -17,6 +17,7 @@ const Sidebar = ({ siteTitle }) => {
   const LogoLink = styled(Link)`
     color: ${theme.palette.fontPrimary};
     text-decoration: none;
+    font-family: "IBM Plex Mono";
   `
 
   return (
