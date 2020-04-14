@@ -39,9 +39,16 @@ export const palettes = {
 }
 
 function themeReducer(state, action) {
-  if (action.type === `SET_THEME`)
-    return { name: action.themeName, palette: palettes[action.themeName] }
+  if (action.type === `SET_THEME`) {
+    const root = document.documentElement
 
+    for (const [styleKey, styleValue] of Object.entries(
+      palettes[action.themeName]
+    )) {
+      root.style.setProperty(`--${styleKey}`, styleValue)
+    }
+    return { name: action.themeName, palette: palettes[action.themeName] }
+  }
   throw new Error(`Unahndled action type: ${action.type}`)
 }
 
