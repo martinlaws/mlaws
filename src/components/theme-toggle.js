@@ -46,28 +46,9 @@ function ThemeToggle() {
   return (
     <ThemeOptionContainer>
       <P>Themes:</P>
-      <ThemeOption
-        onClick={e => {
-          e.preventDefault()
-          setTheme("dark")
-        }}
-      >
-        [Dark]
-      </ThemeOption>
-      <ThemeOption
-        onClick={e => {
-          e.preventDefault()
-          setTheme("light")
-        }}
-      >
-        [Light]
-      </ThemeOption>
-      <ThemeOption
-        onClick={e => {
-          e.preventDefault()
-          setTheme("synthWave84")
-        }}
-      >
+      <ThemeOption onClick={() => setTheme("dark")}>[Dark]</ThemeOption>
+      <ThemeOption onClick={() => setTheme("light")}>[Light]</ThemeOption>
+      <ThemeOption onClick={() => setTheme("synthWave84")}>
         [SynthWave '84]
       </ThemeOption>
     </ThemeOptionContainer>

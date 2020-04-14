@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap");
 
+:root {
+  --sidebar-bg: `#241b2f`;
+  --content-bg: `#262335`;
+  --font-primary: `#36f9f6`;
+  --font-secondary: `#ff7edb`;
+  --link-primary: `#72f1b8`;
+  --accent-primary: `#fe4450`;
+  --accent-secondary: `#fede5d`;
+  --other: `#f97e72`;
+}
+
 html {
   font-family: "IBM Plex Sans", sans-serif;
   -ms-text-size-adjust: 100%;

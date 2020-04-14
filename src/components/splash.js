@@ -137,6 +137,7 @@ function Splash() {
           <CTALink to="/work/">SEE MY WORK</CTALink>
           <CTALink to="/maya/">SHOW ME THE DOG ALREADY</CTALink>
         </div>
+        <div>{JSON.stringify(theme)}</div>
       </Main>
     </>
   )
