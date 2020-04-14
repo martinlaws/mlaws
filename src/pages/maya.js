@@ -3,7 +3,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Beans from "../components/Beans"
+import Beans from "../components/beans"
 
 const Maya = () => {
   return (
