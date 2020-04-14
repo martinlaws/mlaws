@@ -81,10 +81,10 @@ const Sidebar = ({ siteTitle }) => {
         </h1>
       </div>
       <Nav>
-        <NavLink>Work</NavLink>
-        <NavLink>Writing</NavLink>
-        <NavLink>Speaking</NavLink>
-        <NavLink>Contact</NavLink>
+        <NavLink to="/work/">Work</NavLink>
+        <NavLink to="/writing/">Writing</NavLink>
+        <NavLink to="/speaking/">Speaking</NavLink>
+        <NavLink to="/contact'">Contact</NavLink>
       </Nav>
 
       <ThemeToggle />
