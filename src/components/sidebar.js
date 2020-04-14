@@ -84,7 +84,7 @@ const Sidebar = ({ siteTitle }) => {
         <NavLink to="/work/">Work</NavLink>
         <NavLink to="/writing/">Writing</NavLink>
         <NavLink to="/speaking/">Speaking</NavLink>
-        <NavLink to="/contact'">Contact</NavLink>
+        <NavLink to="/contact/">Contact</NavLink>
       </Nav>
 
       <ThemeToggle />

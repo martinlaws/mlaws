@@ -6,7 +6,6 @@ import SEO from "./seo"
 import styled from "styled-components"
 
 import { useTheme } from "../hooks/theme-context"
-import { Main, H1, P, CTALink, InlineLink } from "./splash"
 
 const Beans = () => {
   const [theme] = useTheme()
@@ -19,6 +18,7 @@ const Beans = () => {
     accentSecondary,
     other,
   } = theme.palette
+
   const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;

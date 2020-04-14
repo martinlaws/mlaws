@@ -42,6 +42,15 @@ export const palettes = {
 
 function themeReducer(state, action) {
   if (action.type === `SET_THEME`) {
+    const cssKeys = Object.keys(palettes[action.themeName])
+
+    for (const cssProperty of cssKeys) {
+      document.documentElement.style.setProperty(
+        cssProperty,
+        palettes[action.themeName][cssProperty]
+      )
+    }
+
     return { name: action.themeName, palette: palettes[action.themeName] }
   }
 

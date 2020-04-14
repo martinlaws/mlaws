@@ -5,13 +5,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Projects from "../components/projects"
 
-const Writing = () => {
+const Contact = () => {
   return (
     <Layout>
-      <SEO title="Martin Laws | Writing | UX Developer" />
+      <SEO title="Martin Laws | Contact | UX Developer" />
       <Projects />
     </Layout>
   )
 }
 
-export default Writing
+export default Contact

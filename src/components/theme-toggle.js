@@ -16,9 +16,28 @@ function ThemeToggle() {
     dispatch({ type: `SET_THEME`, themeName: newTheme })
   }
 
+  const resetTheme = event => {
+    event.preventDefault()
+
+    dispatch({ type: `SET_THEME`, themeName: "synthWave84" })
+  }
+
   const { accentSecondary, accentPrimary, fontSecondary } = theme.palette
 
-  const IconButton = styled.div`
+  const P = styled.p`
+    color: ${fontSecondary};
+    font-family: "IBM Plex Sans", sanserif;
+    font-style: italic;
+    margin-bottom: 0;
+  `
+
+  const ThemeOptionContainer = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  `
+
+  const ThemeOption = styled.button`
     cursor: pointer;
     font-family: "IBM Plex Mono", monospaced;
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
@@ -28,6 +47,8 @@ function ThemeToggle() {
     border-color: transparent;
     letter-spacing: 0.04em;
     line-height: 1.4em;
+    background: none;
+    padding: 0;
 
     &:hover {
       color: ${accentSecondary};
@@ -36,10 +57,12 @@ function ThemeToggle() {
   `
 
   return (
-    <div>
-      <IconButton onClick={toggleTheme}>{"[Random Theme]"}</IconButton>
-      <IconButton onClick={toggleTheme}>{"[Customize Theme]"}</IconButton>
-    </div>
+    <ThemeOptionContainer>
+      <P>Themes:</P>
+      <ThemeOption onClick={toggleTheme}>[Dark]</ThemeOption>
+      <ThemeOption onClick={toggleTheme}>[Light]</ThemeOption>
+      <ThemeOption onClick={resetTheme}>[SynthWave '84]</ThemeOption>
+    </ThemeOptionContainer>
   )
 }
 

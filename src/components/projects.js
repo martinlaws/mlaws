@@ -6,7 +6,6 @@ import SEO from "./seo"
 import styled from "styled-components"
 
 import { useTheme } from "../hooks/theme-context"
-import { Main, H1, P, CTALink, InlineLink } from "./splash"
 
 const Projects = () => {
   const [theme] = useTheme()
