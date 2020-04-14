@@ -5,12 +5,20 @@ import styled from "styled-components"
 
 function Splash() {
   const [theme] = useTheme()
-  const { fontPrimary, fontSecondary, linkPrimary } = theme.palette
+  const {
+    fontPrimary,
+    fontSecondary,
+    linkPrimary,
+    accentPrimary,
+    accentSecondary,
+    other,
+  } = theme.palette
 
-  const H4 = styled.h4`
-    color: ${fontSecondary};
-    font-family: "IBM Plex Sans", sanserif;
-    font-weight: 400;
+  const Main = styled.main`
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem 0.5rem;
+    color: ${fontPrimary};
   `
 
   const H1 = styled.h1`
@@ -25,33 +33,106 @@ function Splash() {
     font-style: italic;
   `
 
+  const CTALink = styled(Link)`
+    color: ${linkPrimary};
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 3px;
+    border-style: solid;
+    border-width: 0px 0px 2px;
+    border-color: transparent;
+    letter-spacing: 0.04em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+
+    &:hover {
+      color: ${other};
+      border-color: ${fontPrimary};
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+  `
+
+  const InlineLink = styled.a`
+    color: ${accentPrimary};
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 3px;
+    border-style: solid;
+    border-width: 0px 0px 2px;
+    border-color: transparent;
+    line-height: 1.4em;
+    transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+
+    &.accent {
+      color: ${accentSecondary};
+    }
+
+    &:hover {
+      color: ${linkPrimary};
+      border-color: ${other};
+    }
+  `
+
   return (
     <>
-      <main
-        style={{
-          display: `flex`,
-          flexFlow: `column nowrap`,
-          margin: `1rem 0.5rem`,
-          color: fontPrimary,
-        }}
-      >
-        <H4>
+      <Main>
+        <P>
           Hi, I'm Martin{" "}
           <span role="img" aria-label="waving hand">
             👋
           </span>
-        </H4>
-        <H1>I design with code</H1>
-        <P>
-          I'm a designer-developer crafting beautiful, functional, inclusive,
-          and accessible web experiences. My consulting work is focused on front
-          end development, design thinking, product prototyping, and technical
-          strategy.
         </P>
-        <Link to="/page-2/" style={{ color: linkPrimary }}>
-          Go to page 2
-        </Link>
-      </main>
+        <H1>Senior UX Developer and proud dog dad</H1>
+        <P>
+          Thrilled to be the new guy at{" "}
+          <InlineLink
+            href="https://ux.shopify.com/"
+            target="_blank"
+            className="accent"
+          >
+            Shopify
+          </InlineLink>
+          .
+        </P>
+        <P>
+          Previously:{" "}
+          <InlineLink href="https://consultlowtide.ca" target="_blank">
+            Low Tide Consulting{" "}
+          </InlineLink>
+          ,{" "}
+          <InlineLink href="https://www.lighthouselabs.ca/" target="_blank">
+            Lighthouse Labs
+          </InlineLink>
+          , and{" "}
+          <InlineLink
+            href="https://www.linkedin.com/in/martinlaws/"
+            target="_blank"
+          >
+            others
+          </InlineLink>
+          .
+        </P>
+        <P>
+          Wannabe chef, extremely competitive fantasy{" "}
+          <InlineLink
+            href="https://www.fantasysurvivorgame.com/"
+            target="_blank"
+          >
+            Survivor™️
+          </InlineLink>{" "}
+          player, and all-around 💩 disturber.
+        </P>
+        <div>
+          <CTALink to="/page-2/">SEE MY WORK</CTALink>
+          <CTALink to="/page-2/">SHOW ME THE DOG ALREADY</CTALink>
+        </div>
+      </Main>
     </>
   )
 }

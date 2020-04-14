@@ -12,6 +12,9 @@ export const palettes = {
     fontPrimary: `rgb(237, 237, 237)`,
     fontSecondary: `rgb(158, 158, 158)`,
     linkPrimary: `rgb(255, 255, 255)`,
+    accentPrimary: `rgb(255, 255, 255)`,
+    accentSecondary: `rgb(255, 255, 255)`,
+    other: `rgb(255, 255, 255)`,
   },
   light: {
     sidebarBg: `rgb(255, 255, 255)`,
@@ -19,13 +22,19 @@ export const palettes = {
     fontPrimary: `rgb(52, 52, 52)`,
     fontSecondary: `rgb(105, 105, 105)`,
     linkPrimary: `rgb(52, 52, 52)`,
+    accentPrimary: `rgb(52, 52, 52)`,
+    accentSecondary: `rgb(52, 52, 52)`,
+    other: `rgb(52, 52, 52)`,
   },
   synthWave84: {
     sidebarBg: `#241b2f`,
     contentBg: `#262335`,
     fontPrimary: `#36f9f6`,
     fontSecondary: `#ff7edb`,
-    linkPrimary: `#fede5d`,
+    linkPrimary: `#72f1b8`,
+    accentPrimary: `#fe4450`,
+    accentSecondary: `#fede5d`,
+    other: `#f97e72`,
   },
 }
 
