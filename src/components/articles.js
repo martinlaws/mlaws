@@ -3,12 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 // import { useStaticQuery, graphql } from "gatsby"
 import Table from "./table"
-// import SEO from "./seo"
-import { useTheme } from "../hooks/theme-context"
 
 const Articles = () => {
-  const [theme] = useTheme()
-
   // const { site } = useStaticQuery(
   //   graphql`
   //     query {
