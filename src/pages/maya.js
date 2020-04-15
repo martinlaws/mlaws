@@ -12,7 +12,7 @@ const ImageContainer = styled.div`
 
 const Maya = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Maya D'Amico-Laws | UX Doggo" />
     <Main>
       <H1>Henlo! I'm Maya</H1>
       <P>

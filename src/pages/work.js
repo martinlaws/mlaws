@@ -3,13 +3,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Project from "../components/projects"
+import Projects from "../components/projects"
 
 const Work = () => {
   return (
     <Layout>
       <SEO title="Martin Laws | Portfolio | UX Developer" />
-      <Project />
+      <Projects />
     </Layout>
   )
 }
