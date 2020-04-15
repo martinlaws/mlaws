@@ -64,7 +64,7 @@ function Table({ data }) {
   return (
     <TableContainer>
       {data.map((rowData, index) => (
-        <Row key={index} href={rowData.path}>
+        <Row key={index} to={rowData.path}>
           <P>{rowData.title}</P>
           <P className="date">{rowData.date}</P>
         </Row>

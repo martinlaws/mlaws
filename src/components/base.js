@@ -44,3 +44,25 @@ export const CTALink = styled(Link)`
     margin-right: 2rem;
   }
 `
+
+// const InlineLink = styled.a`
+//   color: var(--accentPrimary);
+//   font-family: "IBM Plex Sans", serif;
+//   font-weight: 600;
+//   text-decoration: none;
+//   padding-top: 3px;
+//   border-style: solid;
+//   border-width: 0px 0px 2px;
+//   border-color: transparent;
+//   line-height: 1.4em;
+//   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+
+//   &.accent {
+//     color: var(--accentSecondary);
+//   }
+
+//   &:hover {
+//     color: var(--linkPrimary);
+//     border-color: var(--other);
+//   }
+// `
