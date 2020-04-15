@@ -5,6 +5,24 @@ import SEO from "../components/seo"
 import { Main, H1, P, CTALink } from "../components/base"
 import Img from "../components/image"
 import Emoji from "../components/emoji"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+
+const Image = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "maya.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+}
 
 const ImageContainer = styled.div`
   max-width: 600px;
