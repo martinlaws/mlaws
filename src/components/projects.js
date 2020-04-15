@@ -5,40 +5,28 @@ import { Link } from "gatsby"
 // import SEO from "./seo"
 import styled from "styled-components"
 
-import { useTheme } from "../hooks/theme-context"
-
 const Projects = () => {
-  const [theme] = useTheme()
-
-  const {
-    fontPrimary,
-    fontSecondary,
-    linkPrimary,
-    // accentPrimary,
-    // accentSecondary,
-    other,
-  } = theme.palette
   const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;
     margin: 1rem 0.5rem;
-    color: ${fontPrimary};
+    color: var(--fontPrimary};
   `
 
   const H1 = styled.h1`
-    color: ${fontPrimary};
+    color: var(--fontPrimary};
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
   `
 
   const P = styled.p`
-    color: ${fontSecondary};
+    color: var(--fontSecondary};
     font-family: "IBM Plex Sans", sanserif;
     font-style: italic;
   `
 
   const CTALink = styled(Link)`
-    color: ${linkPrimary};
+    color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
     text-decoration: none;
@@ -52,8 +40,8 @@ const Projects = () => {
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
     &:hover {
-      color: ${other};
-      border-color: ${fontPrimary};
+      color: var(--other);
+      border-color: var(--fontPrimary);
     }
 
     &:not(:last-of-type) {
@@ -62,7 +50,7 @@ const Projects = () => {
   `
 
   // const InlineLink = styled.a`
-  //   color: ${accentPrimary};
+  //   color: var(--accentPrimary);
   //   font-family: "IBM Plex Sans", serif;
   //   font-weight: 600;
   //   text-decoration: none;
@@ -74,20 +62,22 @@ const Projects = () => {
   //   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
   //   &.accent {
-  //     color: ${accentSecondary};
+  //     color: var(--accentSecondary);
   //   }
 
   //   &:hover {
-  //     color: ${linkPrimary};
-  //     border-color: ${other};
+  //     color: var(--linkPrimary);
+  //     border-color: var(--other);
   //   }
   // `
   return (
-    <Main>
-      <H1>Selected projects</H1>
-      <P>Projects coming soon</P>
-      <CTALink to="/">Go back to the homepage</CTALink>
-    </Main>
+    <>
+      <Main>
+        <H1>Selected projects</H1>
+        <P>Projects coming soon</P>
+        <CTALink to="/">Go back to the homepage</CTALink>
+      </Main>
+    </>
   )
 }
 

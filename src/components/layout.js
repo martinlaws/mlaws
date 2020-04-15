@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
     display: flex;
     flex-flow: row nowrap;
   `
+
   return (
     <ThemeProvider>
       <FlexContainer>

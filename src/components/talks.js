@@ -24,25 +24,15 @@ const Talks = () => {
 
   // const metaDescription = description || site.siteMetadata.description
 
-  const {
-    fontPrimary,
-    linkPrimary,
-    // fontSecondary,
-    // sidebarBg,
-    // accentPrimary,
-    // accentSecondary,
-    other,
-  } = theme.palette
-
   const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;
     margin: 1rem 0.5rem;
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
   `
 
   const H1 = styled.h1`
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
     margin-bottom: 0;
@@ -50,7 +40,7 @@ const Talks = () => {
 
   const CTALink = styled(Link)`
     width: max-content;
-    color: ${linkPrimary};
+    color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
     text-decoration: none;
@@ -64,8 +54,8 @@ const Talks = () => {
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
     &:hover {
-      color: ${other};
-      border-color: ${fontPrimary};
+      color: var(--other);
+      border-color: var(--fontPrimary);
     }
 
     &:not(:last-of-type) {
@@ -74,7 +64,7 @@ const Talks = () => {
   `
 
   // const InlineLink = styled.a`
-  //   color: ${accentPrimary};
+  //   color: var(--accentPrimary);
   //   font-family: "IBM Plex Sans", serif;
   //   font-weight: 600;
   //   text-decoration: none;
@@ -86,12 +76,12 @@ const Talks = () => {
   //   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
   //   &.accent {
-  //     color: ${accentSecondary};
+  //     color: var(--accentSecondary);
   //   }
 
   //   &:hover {
-  //     color: ${linkPrimary};
-  //     border-color: ${other};
+  //     color: var(--linkPrimary);
+  //     border-color: var(--other);
   //   }
   // `
 

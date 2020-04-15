@@ -5,41 +5,28 @@ import { Link } from "gatsby"
 // import SEO from "./seo"
 import styled from "styled-components"
 
-import { useTheme } from "../hooks/theme-context"
-
 const Beans = () => {
-  const [theme] = useTheme()
-
-  const {
-    fontPrimary,
-    fontSecondary,
-    linkPrimary,
-    // accentPrimary,
-    // accentSecondary,
-    other,
-  } = theme.palette
-
   const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;
     margin: 1rem 0.5rem;
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
   `
 
   const H1 = styled.h1`
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
   `
 
   const P = styled.p`
-    color: ${fontSecondary};
+    color: var(--fontSecondary);
     font-family: "IBM Plex Sans", sanserif;
     font-style: italic;
   `
 
   const CTALink = styled(Link)`
-    color: ${linkPrimary};
+    color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
     text-decoration: none;
@@ -53,8 +40,8 @@ const Beans = () => {
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
     &:hover {
-      color: ${other};
-      border-color: ${fontPrimary};
+      color: var(--other);
+      border-color: var(--fontPrimary);
     }
 
     &:not(:last-of-type) {
@@ -62,27 +49,6 @@ const Beans = () => {
     }
   `
 
-  // const InlineLink = styled.a`
-  //   color: ${accentPrimary};
-  //   font-family: "IBM Plex Sans", serif;
-  //   font-weight: 600;
-  //   text-decoration: none;
-  //   padding-top: 3px;
-  //   border-style: solid;
-  //   border-width: 0px 0px 2px;
-  //   border-color: transparent;
-  //   line-height: 1.4em;
-  //   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-
-  //   &.accent {
-  //     color: ${accentSecondary};
-  //   }
-
-  //   &:hover {
-  //     color: ${linkPrimary};
-  //     border-color: ${other};
-  //   }
-  // `
   return (
     <Main>
       <H1>Beans</H1>

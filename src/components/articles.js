@@ -24,25 +24,15 @@ const Articles = () => {
 
   // const metaDescription = description || site.siteMetadata.description
 
-  const {
-    fontPrimary,
-    linkPrimary,
-    // fontSecondary,
-    // sidebarBg,
-    // accentPrimary,
-    // accentSecondary,
-    other,
-  } = theme.palette
-
   const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;
     margin: 1rem 0.5rem;
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
   `
 
   const H1 = styled.h1`
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
     margin-bottom: 0;
@@ -50,7 +40,7 @@ const Articles = () => {
 
   const CTALink = styled(Link)`
     width: max-content;
-    color: ${linkPrimary};
+    color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
     text-decoration: none;
@@ -64,36 +54,14 @@ const Articles = () => {
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
     &:hover {
-      color: ${other};
-      border-color: ${fontPrimary};
+      color: var(--other);
+      border-color: var(--fontPrimary);
     }
 
     &:not(:last-of-type) {
       margin-right: 2rem;
     }
   `
-
-  // const InlineLink = styled.a`
-  //   color: ${accentPrimary};
-  //   font-family: "IBM Plex Sans", serif;
-  //   font-weight: 600;
-  //   text-decoration: none;
-  //   padding-top: 3px;
-  //   border-style: solid;
-  //   border-width: 0px 0px 2px;
-  //   border-color: transparent;
-  //   line-height: 1.4em;
-  //   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-
-  //   &.accent {
-  //     color: ${accentSecondary};
-  //   }
-
-  //   &:hover {
-  //     color: ${linkPrimary};
-  //     border-color: ${other};
-  //   }
-  // `
 
   const site = {
     articles: [

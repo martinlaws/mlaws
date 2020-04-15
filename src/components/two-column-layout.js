@@ -30,7 +30,7 @@ function TwoColumnLayout({ children }) {
     grid-template-columns: 1fr;
     min-height: 100vh;
     width: 100vw;
-    background-color: ${theme.palette.contentBg};
+    background-color: var(--contentBg);
 
     @media only screen and (min-width: 796px) {
       grid-template-columns: 280px auto;

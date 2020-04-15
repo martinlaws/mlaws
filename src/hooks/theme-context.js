@@ -47,7 +47,7 @@ function themeReducer(state, action) {
     )) {
       root.style.setProperty(`--${styleKey}`, styleValue)
     }
-    return { name: action.themeName, palette: palettes[action.themeName] }
+    return { name: action.themeName }
   }
   throw new Error(`Unahndled action type: ${action.type}`)
 }

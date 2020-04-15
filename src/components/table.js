@@ -6,16 +6,6 @@ import { Link } from "gatsby"
 function Table({ data }) {
   const [theme] = useTheme()
 
-  const {
-    fontPrimary,
-    fontSecondary,
-    linkPrimary,
-    accentPrimary,
-    other,
-    // sidebarBg,
-    // accentSecondary,
-  } = theme.palette
-
   const TableContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
@@ -23,12 +13,12 @@ function Table({ data }) {
 
     p {
       font-family: "IBM Plex Mono", monospace;
-      color: ${linkPrimary};
+      color: var(--linkPrimary);
       font-style: normal;
 
       &.date {
         font-style: italic;
-        color: ${fontSecondary};
+        color: var(--fontSecondary);
         text-align: end;
       }
     }
@@ -39,21 +29,21 @@ function Table({ data }) {
     flex-flow: column nowrap;
     justify-content: space-between;
     border: none;
-    border-bottom: 2px solid ${other};
+    border-bottom: 2px solid var(--other);
     padding: 1rem 0;
     background: transparent;
     cursor: pointer;
     text-decoration: none;
 
     &:hover {
-      border-color: ${fontPrimary};
+      border-color: var(--fontPrimary);
 
       * {
-        color: ${accentPrimary};
+        color: var(--accentPrimary);
       }
 
       .date {
-        color: ${accentPrimary};
+        color: var(--accentPrimary);
         width: content-max;
       }
     }
@@ -67,7 +57,7 @@ function Table({ data }) {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 400;
     margin: 0;
-    color: ${fontSecondary};
+    color: var(--fontSecondary);
     font-style: italic;
   `
 

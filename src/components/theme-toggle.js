@@ -9,10 +9,8 @@ function ThemeToggle() {
   const setTheme = newTheme =>
     dispatch({ type: `SET_THEME`, themeName: newTheme })
 
-  const { accentSecondary, accentPrimary, fontSecondary } = theme.palette
-
   const P = styled.p`
-    color: ${fontSecondary};
+    color: var(--fontSecondary);
     font-family: "IBM Plex Sans", sanserif;
     font-style: italic;
     margin-bottom: 0;
@@ -28,7 +26,7 @@ function ThemeToggle() {
     cursor: pointer;
     font-family: "IBM Plex Mono", monospaced;
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-    color: ${accentPrimary};
+    color: var(--accentPrimary);
     border-style: solid;
     border-width: 0px 0px 2px;
     border-color: transparent;
@@ -38,8 +36,8 @@ function ThemeToggle() {
     padding: 0;
 
     &:hover {
-      color: ${accentSecondary};
-      border-color: ${fontSecondary};
+      color: var(--accentSecondary);
+      border-color: var(--fontSecondary);
     }
   `
 

@@ -8,27 +8,18 @@ import styled from "styled-components"
 const Sidebar = ({ siteTitle }) => {
   const [theme] = useTheme()
 
-  const {
-    fontPrimary,
-    fontSecondary,
-    linkPrimary,
-    sidebarBg,
-    accentPrimary,
-    other,
-  } = theme.palette
-
   const Aside = styled.aside`
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    background: ${sidebarBg};
+    background: var(--sidebarBg);
     padding: 2rem;
     font-family: "IBM Plex Sans";
-    color: ${fontSecondary};
+    color: var(--fontSecondary);
   `
 
   const LogoLink = styled(Link)`
-    color: ${fontPrimary};
+    color: var(--fontPrimary);
     text-decoration: none;
     font-family: "IBM Plex Mono";
     margin: 0;
@@ -39,8 +30,8 @@ const Sidebar = ({ siteTitle }) => {
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
     &:hover {
-      color: ${accentPrimary};
-      border-color: ${fontSecondary};
+      color: var(--accentPrimary);
+      border-color: var(--fontSecondary);
     }
   `
 
@@ -50,7 +41,7 @@ const Sidebar = ({ siteTitle }) => {
   `
 
   const NavLink = styled(Link)`
-    color: ${linkPrimary};
+    color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
     font-style: italic;
@@ -66,8 +57,8 @@ const Sidebar = ({ siteTitle }) => {
     width: max-content;
 
     &:hover {
-      color: ${other};
-      border-color: ${fontPrimary};
+      color: var(--other);
+      border-color: var(--fontPrimary);
     }
   `
 
