@@ -1,14 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { useTheme } from "../hooks/theme-context"
 import ThemeToggle from "./theme-toggle"
 import styled from "styled-components"
 
-const Sidebar = ({ siteTitle }) => {
-  const [theme] = useTheme()
-
-  const Aside = styled.aside`
+const Aside = styled.aside`
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -18,7 +14,7 @@ const Sidebar = ({ siteTitle }) => {
     color: var(--fontSecondary);
   `
 
-  const LogoLink = styled(Link)`
+const LogoLink = styled(Link)`
     color: var(--fontPrimary);
     text-decoration: none;
     font-family: "IBM Plex Mono";
@@ -35,12 +31,12 @@ const Sidebar = ({ siteTitle }) => {
     }
   `
 
-  const Nav = styled.nav`
+const Nav = styled.nav`
     display: flex;
     flex-flow: column nowrap;
   `
 
-  const NavLink = styled(Link)`
+const NavLink = styled(Link)`
     color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
@@ -62,6 +58,7 @@ const Sidebar = ({ siteTitle }) => {
     }
   `
 
+const Sidebar = ({ siteTitle }) => {
   return (
     <Aside>
       <div>

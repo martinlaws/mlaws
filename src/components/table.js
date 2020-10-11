@@ -1,12 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { useTheme } from "../hooks/theme-context"
 import { Link } from "gatsby"
 
-function Table({ data }) {
-  const [theme] = useTheme()
-
-  const TableContainer = styled.div`
+const TableContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
     margin: 4rem 0;
@@ -24,7 +20,7 @@ function Table({ data }) {
     }
   `
 
-  const Row = styled(Link)`
+const Row = styled(Link)`
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -53,7 +49,7 @@ function Table({ data }) {
     }
   `
 
-  const P = styled.p`
+const P = styled.p`
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 400;
     margin: 0;
@@ -61,6 +57,7 @@ function Table({ data }) {
     font-style: italic;
   `
 
+function Table({ data }) {
   return (
     <TableContainer>
       {data.map((rowData, index) => (

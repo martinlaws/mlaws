@@ -3,7 +3,7 @@
   "private": false,
   "description": "Martin Laws personal portfolio",
   "version": "0.1.0",
-  "author": "Martin Laws <martin@consultlowtide.ca>",
+  "author": "Martin Laws <mlaws@hey.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.12",

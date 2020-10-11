@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Martin Laws`,
     description: `UX Developer, design thinker, dog dad.`,
-    author: `@gatsbyjs`,
+    author: `@martinlaws`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,8 +28,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

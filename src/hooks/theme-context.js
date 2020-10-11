@@ -1,9 +1,7 @@
-import React from "react"
+import React, { useReducer, createContext } from "react"
 
-const ThemeStateContext = React.createContext()
-const ThemeDispatchContext = React.createContext()
-
-// const [theme, setTheme] = useState("light")
+const ThemeStateContext = createContext()
+const ThemeDispatchContext = createContext()
 
 export const palettes = {
   dark: {
@@ -49,11 +47,11 @@ function themeReducer(state, action) {
     }
     return { name: action.themeName }
   }
-  throw new Error(`Unahndled action type: ${action.type}`)
+  throw new Error(`Unhandled action type: ${action.type}`)
 }
 
 function ThemeProvider({ children }) {
-  const [state, dispatch] = React.useReducer(themeReducer, {
+  const [state, dispatch] = useReducer(themeReducer, {
     themeName: "synthWave84",
     palette: palettes.synthWave84,
   })

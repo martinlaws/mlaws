@@ -1,28 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-
 import { useTheme } from "../hooks/theme-context"
 
-function ThemeToggle() {
-  const [theme, dispatch] = useTheme()
-
-  const setTheme = newTheme =>
-    dispatch({ type: `SET_THEME`, themeName: newTheme })
-
-  const P = styled.p`
+const P = styled.p`
     color: var(--fontSecondary);
     font-family: "IBM Plex Sans", sanserif;
     font-style: italic;
     margin-bottom: 0;
   `
 
-  const ThemeOptionContainer = styled.div`
+const ThemeOptionContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
   `
 
-  const ThemeOption = styled.button`
+const ThemeOption = styled.button`
     cursor: pointer;
     font-family: "IBM Plex Mono", monospaced;
     transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
@@ -40,6 +33,13 @@ function ThemeToggle() {
       border-color: var(--fontSecondary);
     }
   `
+
+function ThemeToggle() {
+  // eslint-disable-next-line no-unused-vars
+  const [theme, dispatch] = useTheme()
+
+  const setTheme = newTheme =>
+    dispatch({ type: `SET_THEME`, themeName: newTheme })
 
   return (
     <ThemeOptionContainer>

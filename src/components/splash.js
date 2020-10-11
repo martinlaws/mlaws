@@ -1,13 +1,9 @@
-import React, { useEffect } from "react"
+import React  from "react"
 import { Link } from "gatsby"
-import { useTheme } from "../hooks/theme-context"
 import styled from "styled-components"
 import Emoji from "./emoji"
 
-function Splash() {
-  const [theme, dispatch] = useTheme()
-
-  const Main = styled.main`
+const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;
     margin: 1rem 0.5rem;
@@ -18,20 +14,20 @@ function Splash() {
     }
   `
 
-  const H1 = styled.h1`
+const H1 = styled.h1`
     color: var(--fontPrimary);
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
   `
 
-  const P = styled.p`
+const P = styled.p`
     color: var(--fontSecondary);
     font-family: "IBM Plex Sans", sanserif;
     font-style: italic;
     margin-bottom: 0.25rem;
   `
 
-  const CTALink = styled(Link)`
+const CTALink = styled(Link)`
     color: var(--linkPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
@@ -55,7 +51,7 @@ function Splash() {
     }
   `
 
-  const InlineLink = styled.a`
+const InlineLink = styled.a`
     color: var(--accentPrimary);
     font-family: "IBM Plex Sans", serif;
     font-weight: 600;
@@ -77,10 +73,7 @@ function Splash() {
     }
   `
 
-  // useEffect(() => {
-  //   dispatch({ type: `SET_THEME`, themeName: `synthWave84` })
-  // }, [])
-
+function Splash() {
   return (
     <>
       <Main>

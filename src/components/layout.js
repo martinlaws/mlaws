@@ -13,12 +13,12 @@ import TwoColumnLayout from "./two-column-layout"
 import "./layout.css"
 import styled from "styled-components"
 
-const Layout = ({ children }) => {
-  const FlexContainer = styled.div`
+const FlexContainer = styled.div`
     display: flex;
     flex-flow: row nowrap;
   `
 
+const Layout = ({ children }) => {
   return (
     <ThemeProvider>
       <FlexContainer>

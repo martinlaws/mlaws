@@ -1,10 +1,9 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Table from "../components/table"
-import { Main, H1, P, CTALink } from "../components/base"
+import { Main, H1, CTALink } from "../components/base"
 
 const site = {
   articles: [

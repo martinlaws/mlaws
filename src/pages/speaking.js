@@ -1,14 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Main, H1, P, CTALink } from "../components/base"
+import { Main, H1, CTALink } from "../components/base"
 import Table from "../components/table"
 
 const site = {
   talks: [
     {
       title: "FITC: Web Unleashed",
-      date: "Fall 2020 (upcoming)",
+      date: "October 2020",
       path: "/speaking/high-tide-low-tide/",
     },
     {
