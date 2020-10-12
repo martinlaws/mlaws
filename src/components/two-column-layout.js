@@ -8,13 +8,18 @@ const Main = styled.main`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  padding: 5rem;
+  padding: 1rem;
   overflow-y: scroll auto;
+
+  @media ${devices.tablet} {
+    padding: 5rem;
+  }
 `
 
 const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
   min-height: 100vh;
   width: 100vw;
   background-color: var(--contentBg);

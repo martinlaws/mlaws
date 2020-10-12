@@ -3,13 +3,14 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
 import ThemeToggle from "./theme-toggle"
-import { devices, H1 as DefaultH1, StyledLink as NavLink } from "./base"
+import { devices, H1 as DefaultH1, StyledLink, NavSectionHeading } from "./base"
 import Emoji from "./emoji"
 
 const Aside = styled.aside`
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 4rem 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content;
+  height: max-content;
   justify-content: space-between;
   background: var(--sidebarBg);
   padding: 2rem;
@@ -25,6 +26,7 @@ const Aside = styled.aside`
   @media ${devices.tablet} {
     display: grid;
     grid-template-rows: 10rem 10rem 1fr;
+    min-height: 100vh;
   }
 `
 
@@ -51,21 +53,70 @@ const Nav = styled.nav`
 
 const H1 = styled(DefaultH1)`
   margin-bottom: 0;
+  display: none;
+
+  @media ${devices.tablet} {
+    display: block;
+  }
+`
+
+const NavLink = styled(StyledLink)`
+  &.isActive::before {
+    content: "📍";
+  }
 `
 
 const HamburgerMenu = styled.div`
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   font-size: 2.5rem;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--sidebarBg);
-  cursor: pointer;
 
   max-height: 6rem;
 
   @media ${devices.tablet} {
     display: none;
+  }
+`
+
+const HelpText = styled.span`
+  font-size: 1rem;
+`
+
+const Button = styled.button`
+  height: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  gap: 1rem;
+  color: var(--fontSecondary);
+  --casl: "CASL" 1;
+  --wght: "wght" 400;
+  outline: 3px solid var(--other);
+
+  & .helpText {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: var(--fontPrimary);
+    --slnt: "slnt" -15;
+    --wght: "wght" 800;
+
+    & .helpText {
+      text-decoration: none;
+    }
+  }
+
+  &:focus {
+    outline: 3px solid var(--other);
   }
 `
 
@@ -77,22 +128,20 @@ const Sidebar = ({ siteTitle }) => {
 
   return (
     <>
-      <HamburgerMenu
-        onClick={() => setshowSidebarOnMobile(!showSidebarOnMobile)}
-      >
-        <H1 to="/">{siteTitle}</H1>
-        <Emoji label="hamburger" symbol="🍔" />
+      <HamburgerMenu>
+        <Button onClick={() => setshowSidebarOnMobile(!showSidebarOnMobile)}>
+          <HelpText className="helpText">{"hamburger menu →"}</HelpText>
+          <Emoji label="hamburger" symbol="🍔" />
+        </Button>
       </HamburgerMenu>
       <Aside className={showSidebarOnMobile && "showSidebarOnMobile"}>
-        <div>
-          {/* <small>{siteDescription}</small> */}
-          <H1 style={{ margin: 0 }}>
-            <LogoLink to="/" style={{}}>
-              {siteTitle}
-            </LogoLink>
-          </H1>
-        </div>
+        <H1>
+          <LogoLink to="/" style={{}}>
+            {siteTitle}
+          </LogoLink>
+        </H1>
         <Nav>
+          <NavSectionHeading>Pages</NavSectionHeading>
           <NavLink className={isCurrentRoute("/")} to="/">
             Martin Who?
           </NavLink>

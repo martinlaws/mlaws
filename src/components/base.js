@@ -32,7 +32,7 @@ export const Main = styled.main`
 export const H1 = styled.h1`
   color: var(--fontPrimary);
   --wght: "wght" 900;
-  // --casl: "CASL" 1;
+  --mono: "MONO" 0;
   --slnt: "slnt" 0;
 `
 
@@ -125,4 +125,13 @@ export const StyledA = styled.a`
   &:focus {
     outline: 3px solid var(--other);
   }
+`
+
+export const NavSectionHeading = styled.p`
+  color: var(--other);
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  --wght: "wght" 900;
+  --mono: "MONO" 1;
 `

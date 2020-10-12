@@ -41,9 +41,10 @@ const Main = styled.main`
 `
 
 const CasualSpan = styled.span`
+  display: block;
   --casl: "CASL" 1;
   --slnt: "slnt" -15;
-  --wght: "wght" 600;
+  --wght: "wght" 200;
   color: var(--fontSecondary);
 `
 
@@ -92,10 +93,11 @@ function Splash() {
         </ImageContainer>
         <article>
           <P>
-            Hi, I'm Martin <Emoji symbol="👋" label="waving hand" />
+            Hi, I'm Martin <Emoji symbol="👋🏻" label="waving hand" />
           </P>
           <H1 className="padded-bottom">
-            Senior UX Developer <CasualSpan>and proud dog dad</CasualSpan>
+            Senior UX Developer
+            <CasualSpan>and proud dog dad.</CasualSpan>
           </H1>
           <P>
             Thrilled to be the new guy at{" "}

@@ -1,18 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { useTheme, themeOptions } from "../hooks/theme-context"
-
-const P = styled.p`
-  background-color: var(--other);
-  color: var(--sidebarBg);
-  font-style: italic;
-  margin-bottom: 0;
-`
+import { NavSectionHeading } from "./base"
 
 const ThemeOptionContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
+  justify-content: flex-end;
 `
 
 const ThemeOption = styled.button`
@@ -34,6 +29,10 @@ const ThemeOption = styled.button`
     text-decoration: none;
   }
 
+  &.currentTheme::before {
+    content: "🎨";
+  }
+
   &:focus {
     outline: 3px solid var(--other);
   }
@@ -50,7 +49,7 @@ function ThemeToggle() {
 
   return (
     <ThemeOptionContainer>
-      <P>Themes:</P>
+      <NavSectionHeading>Themes</NavSectionHeading>
       {themeOptions.map(themeOption => (
         <ThemeOption
           key={themeOption}

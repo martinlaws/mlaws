@@ -1,4 +1,4 @@
-import React, { useReducer, createContext } from "react"
+import React, { useEffect, useReducer, createContext } from "react"
 
 const ThemeStateContext = createContext()
 const ThemeDispatchContext = createContext()
@@ -42,6 +42,8 @@ function themeReducer(state, action) {
   if (action.type === `SET_THEME`) {
     const root = document.documentElement
 
+    localStorage.setItem("theme", action.themeName)
+
     for (const [styleKey, styleValue] of Object.entries(
       palettes[action.themeName]
     )) {
@@ -55,8 +57,14 @@ function themeReducer(state, action) {
 function ThemeProvider({ children }) {
   const [state, dispatch] = useReducer(themeReducer, {
     name: "synthWave84",
-    palette: palettes.synthWave84,
   })
+
+  useEffect(() => {
+    dispatch({
+      type: `SET_THEME`,
+      themeName: localStorage.getItem("theme") || "synthWave84",
+    })
+  }, [])
 
   return (
     <ThemeStateContext.Provider value={state}>
