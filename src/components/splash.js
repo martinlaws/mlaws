@@ -109,7 +109,7 @@ function Splash() {
           <P>
             Previously:{" "}
             <InlineLink href="https://consultlowtide.ca" target="_blank">
-              Low Tide Consulting{" "}
+              Low Tide Consulting
             </InlineLink>
             ,{" "}
             <InlineLink href="https://www.lighthouselabs.ca/" target="_blank">
