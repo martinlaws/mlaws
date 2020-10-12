@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Emoji from "./emoji"
-import { H1 } from "./base"
+import { devices, H1, StyledA, StyledLink } from "./base"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -23,10 +23,18 @@ const ImageContainer = styled.div`
 `
 
 const Main = styled.main`
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 1rem 0.5rem;
   color: var(--fontPrimary);
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @media ${devices.laptop} {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .padded-bottom {
     margin-bottom: 2rem;
@@ -41,12 +49,16 @@ const CasualSpan = styled.span`
 `
 
 const P = styled.p`
-  color: var(--fontSecondary);
+  color: var(--fontPrimary);
   font-style: italic;
   margin-bottom: 0.25rem;
 `
 
-const CTALink = styled(Link)`
+const InlineLink = styled(StyledA)`
+  color: var(--fontSecondary);
+`
+
+const CTALink = styled(StyledLink)`
   color: var(--linkPrimary);
   text-decoration: none;
   padding-top: 3px;
@@ -68,26 +80,6 @@ const CTALink = styled(Link)`
   }
 `
 
-const InlineLink = styled.a`
-  color: var(--accentPrimary);
-  text-decoration: none;
-  padding-top: 3px;
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: transparent;
-  line-height: 1.4em;
-  transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-
-  &.accent {
-    color: var(--accentSecondary);
-  }
-
-  &:hover {
-    color: var(--linkPrimary);
-    border-color: var(--other);
-  }
-`
-
 function Splash() {
   const data = useStaticQuery(query)
   return (
@@ -96,56 +88,58 @@ function Splash() {
         <ImageContainer>
           <Image fluid={data.fileName.childImageSharp.fluid} />
         </ImageContainer>
-        <P>
-          Hi, I'm Martin <Emoji symbol="👋" label="waving hand" />
-        </P>
-        <H1 className="padded-bottom">
-          Senior UX Developer <CasualSpan>and proud dog dad</CasualSpan>
-        </H1>
-        <P>
-          Thrilled to be the new guy at{" "}
-          <InlineLink
-            href="https://ux.shopify.com/"
-            target="_blank"
-            className="accent"
-          >
-            Shopify
-          </InlineLink>
-          .
-        </P>
-        <P>
-          Previously:{" "}
-          <InlineLink href="https://consultlowtide.ca" target="_blank">
-            Low Tide Consulting{" "}
-          </InlineLink>
-          ,{" "}
-          <InlineLink href="https://www.lighthouselabs.ca/" target="_blank">
-            Lighthouse Labs
-          </InlineLink>
-          , and{" "}
-          <InlineLink
-            href="https://www.linkedin.com/in/martinlaws/"
-            target="_blank"
-          >
-            others
-          </InlineLink>
-          .
-        </P>
-        <P className="padded-bottom">
-          Wannabe chef, extremely competitive fantasy{" "}
-          <InlineLink
-            href="https://www.fantasysurvivorgame.com/"
-            target="_blank"
-          >
-            Survivor
-            <Emoji symbol="™" label="Trademark symbol" />
-          </InlineLink>{" "}
-          player, and all-around <Emoji symbol="💩" label="shit" /> disturber.
-        </P>
-        <div>
-          <CTALink to="/work/">see my work</CTALink>
-          <CTALink to="/maya/">show me the dog already</CTALink>
-        </div>
+        <article>
+          <P>
+            Hi, I'm Martin <Emoji symbol="👋" label="waving hand" />
+          </P>
+          <H1 className="padded-bottom">
+            Senior UX Developer <CasualSpan>and proud dog dad</CasualSpan>
+          </H1>
+          <P>
+            Thrilled to be the new guy at{" "}
+            <InlineLink
+              href="https://ux.shopify.com/"
+              target="_blank"
+              className="accent"
+            >
+              Shopify
+            </InlineLink>
+            .
+          </P>
+          <P>
+            Previously:{" "}
+            <InlineLink href="https://consultlowtide.ca" target="_blank">
+              Low Tide Consulting{" "}
+            </InlineLink>
+            ,{" "}
+            <InlineLink href="https://www.lighthouselabs.ca/" target="_blank">
+              Lighthouse Labs
+            </InlineLink>
+            , and{" "}
+            <InlineLink
+              href="https://www.linkedin.com/in/martinlaws/"
+              target="_blank"
+            >
+              others
+            </InlineLink>
+            .
+          </P>
+          <P className="padded-bottom">
+            Wannabe chef, extremely competitive fantasy{" "}
+            <InlineLink
+              href="https://www.fantasysurvivorgame.com/"
+              target="_blank"
+            >
+              Survivor
+              <Emoji symbol="™" label="Trademark symbol" />
+            </InlineLink>{" "}
+            player, and all-around <Emoji symbol="💩" label="shit" /> disturber.
+          </P>
+          <div>
+            <CTALink to="/work/">see my work</CTALink>
+            <CTALink to="/maya/">show me the dog already</CTALink>
+          </div>
+        </article>
       </Main>
     </>
   )
