@@ -8,15 +8,15 @@ import Emoji from "../components/emoji"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const query = graphql`
-    query {
-        placeholderImage: file(relativePath: { eq: "maya.jpg" }) {
-            childImageSharp {
-                fluid(maxWidth: 300) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
+  query {
+    placeholderImage: file(relativePath: { eq: "maya.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
+      }
     }
+  }
 `
 
 const Image = () => {
@@ -33,7 +33,9 @@ const Maya = () => (
   <Layout>
     <SEO title="Maya D'Amico-Laws | UX Doggo" />
     <Main>
-      <H1>Henlo! I'm Maya <Emoji label="paw" symbol="🦮"/></H1>
+      <H1>
+        Henlo! I'm Maya <Emoji label="paw" symbol="🦮" />
+      </H1>
       <P>
         I am a woman on a mission: maximum comfort. I have a couple of
         two-leggeds on staff, Martin and Danielle, who tend to me 24/7. I can

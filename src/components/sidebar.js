@@ -5,58 +5,56 @@ import ThemeToggle from "./theme-toggle"
 import styled from "styled-components"
 
 const Aside = styled.aside`
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    background: var(--sidebarBg);
-    padding: 2rem;
-    font-family: "IBM Plex Sans";
-    color: var(--fontSecondary);
-  `
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: var(--sidebarBg);
+  padding: 2rem;
+  color: var(--fontSecondary);
+`
 
 const LogoLink = styled(Link)`
-    color: var(--fontPrimary);
-    text-decoration: none;
-    font-family: "IBM Plex Mono";
-    margin: 0;
-    border-style: solid;
-    border-width: 0px 0px 2px;
-    border-color: transparent;
-    line-height: 1.2em;
-    transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+  color: var(--fontPrimary);
+  text-decoration: none;
+  margin: 0;
+  border-style: solid;
+  border-width: 0px 0px 2px;
+  border-color: transparent;
+  line-height: 1.2em;
+  transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
-    &:hover {
-      color: var(--accentPrimary);
-      border-color: var(--fontSecondary);
-    }
-  `
+  &:hover {
+    color: var(--accentPrimary);
+    border-color: var(--fontSecondary);
+  }
+`
 
 const Nav = styled.nav`
-    display: flex;
-    flex-flow: column nowrap;
-  `
+  display: flex;
+  flex-flow: column nowrap;
+`
 
 const NavLink = styled(Link)`
-    color: var(--linkPrimary);
-    font-family: "IBM Plex Sans", serif;
-    font-weight: 600;
-    font-style: italic;
-    text-decoration: none;
-    padding-top: 3px;
-    border-style: solid;
-    border-width: 0px 0px 2px;
-    border-color: transparent;
-    letter-spacing: 0.08em;
-    line-height: 1.4em;
-    text-transform: uppercase;
-    transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-    width: max-content;
+  color: var(--linkPrimary);
+  --wght: "wght" 800;
+  --casl: "CASL" 1;
+  text-decoration: none;
+  padding-top: 3px;
+  border-style: solid;
+  border-width: 0px 0px 2px;
+  border-color: transparent;
+  letter-spacing: 0.08em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+  width: max-content;
 
-    &:hover {
-      color: var(--other);
-      border-color: var(--fontPrimary);
-    }
-  `
+  &:hover {
+    background-color: var(--fontSecondary);
+    color: var(--sidebarBg);
+    border-color: var(--fontPrimary);
+  }
+`
 
 const Sidebar = ({ siteTitle }) => {
   return (

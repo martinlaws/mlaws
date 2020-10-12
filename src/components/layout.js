@@ -14,9 +14,15 @@ import "./layout.css"
 import styled from "styled-components"
 
 const FlexContainer = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-  `
+  display: flex;
+  flex-flow: row nowrap;
+
+  * {
+    font-family: var(--variableFontFamily);
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+      var(--CRSV);
+  }
+`
 
 const Layout = ({ children }) => {
   return (

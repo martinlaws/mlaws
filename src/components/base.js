@@ -10,21 +10,17 @@ export const Main = styled.main`
 
 export const H1 = styled.h1`
   color: var(--fontPrimary);
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 600;
+  --wght: "wght" 800;
 `
 
 export const P = styled.p`
   color: var(--fontSecondary);
-  font-family: "IBM Plex Sans", sanserif;
   font-style: italic;
 `
 
 export const CTALink = styled(Link)`
   width: max-content;
   color: var(--linkPrimary);
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 600;
   text-decoration: none;
   padding-top: 3px;
   border-style: solid;
@@ -42,5 +38,12 @@ export const CTALink = styled(Link)`
 
   &:not(:last-of-type) {
     margin-right: 2rem;
+  }
+`
+
+export const LinkButton = styled.span`
+  &:hover {
+    color: var(--other);
+    border-color: var(--fontPrimary);
   }
 `
