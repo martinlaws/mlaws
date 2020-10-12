@@ -1,8 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import ThemeToggle from "./theme-toggle"
 import styled from "styled-components"
+import ThemeToggle from "./theme-toggle"
+import { StyledLink as NavLink } from "./base"
 
 const Aside = styled.aside`
   display: flex;
@@ -34,29 +35,10 @@ const Nav = styled.nav`
   flex-flow: column nowrap;
 `
 
-const NavLink = styled(Link)`
-  color: var(--linkPrimary);
-  --wght: "wght" 800;
-  --casl: "CASL" 1;
-  text-decoration: none;
-  padding-top: 3px;
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: transparent;
-  letter-spacing: 0.08em;
-  line-height: 1.4em;
-  text-transform: uppercase;
-  transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-  width: max-content;
-
-  &:hover {
-    background-color: var(--fontSecondary);
-    color: var(--sidebarBg);
-    border-color: var(--fontPrimary);
-  }
-`
-
 const Sidebar = ({ siteTitle }) => {
+  const pathName = typeof window !== "undefined" ? window.location.pathname : ""
+  const isCurrentRoute = routeName => routeName === pathName && "isActive"
+
   return (
     <Aside>
       <div>
@@ -68,10 +50,21 @@ const Sidebar = ({ siteTitle }) => {
         </h1>
       </div>
       <Nav>
-        <NavLink to="/work/">Work</NavLink>
-        <NavLink to="/writing/">Writing</NavLink>
-        <NavLink to="/speaking/">Speaking</NavLink>
-        <NavLink to="/contact/">Contact</NavLink>
+        <NavLink className={isCurrentRoute("/")} to="/">
+          Martin Who?
+        </NavLink>
+        <NavLink className={isCurrentRoute("/work/")} to="/work/">
+          Work
+        </NavLink>
+        <NavLink className={isCurrentRoute("/writing/")} to="/writing/">
+          Writing
+        </NavLink>
+        <NavLink className={isCurrentRoute("/speaking/")} to="/speaking/">
+          Speaking
+        </NavLink>
+        <NavLink className={isCurrentRoute("/contact/")} to="/contact/">
+          Contact
+        </NavLink>
       </Nav>
 
       <ThemeToggle />

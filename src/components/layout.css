@@ -5,7 +5,8 @@
   --contentBg: #262335;
   --fontPrimary: #36f9f6;
   --fontSecondary: #ff7edb;
-  --linkPrimary: #72f1b8;
+  /* --linkPrimary: #72f1b8; */
+  --linkPrimary: var(--fontSecondary);
   --accentPrimary: #fe4450;
   --accentSecondary: #fede5d;
   --other: #f97e72;

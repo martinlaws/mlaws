@@ -35,8 +35,8 @@ const Main = styled.main`
 
 const CasualSpan = styled.span`
   --casl: "CASL" 1;
-  --slnt: "slnt" 1;
-  --wght: "wght" 400;
+  --slnt: "slnt" -15;
+  --wght: "wght" 600;
   color: var(--fontSecondary);
 `
 

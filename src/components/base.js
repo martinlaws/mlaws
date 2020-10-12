@@ -47,3 +47,33 @@ export const LinkButton = styled.span`
     border-color: var(--fontPrimary);
   }
 `
+
+export const StyledLink = styled(Link)`
+  color: var(--fontSecondary);
+  --slnt: "slnt" 0;
+  --wght: "wght" 600;
+  text-decoration: underline;
+  padding-top: 3px;
+  border-style: solid;
+  border-width: 0px 0px 2px;
+  border-color: transparent;
+  letter-spacing: 0.08em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  transition: all 0.1s ease 0s;
+  width: max-content;
+
+  &:hover,
+  &:focus,
+  &.isActive {
+    color: var(--fontPrimary);
+    --wght: "wght" 800;
+    --slnt: "slnt" -15;
+    --casl: "CASL" 1;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 3px solid var(--other);
+  }
+`

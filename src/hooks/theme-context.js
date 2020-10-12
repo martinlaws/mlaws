@@ -3,6 +3,8 @@ import React, { useReducer, createContext } from "react"
 const ThemeStateContext = createContext()
 const ThemeDispatchContext = createContext()
 
+const themeOptions = ["dark", "light", "synthWave84"]
+
 export const palettes = {
   dark: {
     sidebarBg: `rgb(52, 52, 52)`,
@@ -52,7 +54,7 @@ function themeReducer(state, action) {
 
 function ThemeProvider({ children }) {
   const [state, dispatch] = useReducer(themeReducer, {
-    themeName: "synthWave84",
+    name: "synthWave84",
     palette: palettes.synthWave84,
   })
 
@@ -87,4 +89,4 @@ function useTheme() {
   return [useThemeState(), useThemeDispatch()]
 }
 
-export { ThemeProvider, useTheme }
+export { ThemeProvider, useTheme, themeOptions }

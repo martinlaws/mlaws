@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useTheme } from "../hooks/theme-context"
+import { useTheme, themeOptions } from "../hooks/theme-context"
 
 const P = styled.p`
   color: var(--fontSecondary);
@@ -17,22 +17,27 @@ const ThemeOptionContainer = styled.div`
 const ThemeOption = styled.button`
   cursor: pointer;
   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
-  color: var(--accentPrimary);
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: transparent;
+  color: var(--fontSecondary);
+  border: none;
   letter-spacing: 0.04em;
   line-height: 1.4em;
   background: none;
   padding: 0;
 
-  &:hover {
-    background-color: var(--accentSecondary);
-    border-color: var(--fontSecondary);
+  &:hover,
+  &:focus,
+  &.currentTheme {
+    color: var(--fontPrimary);
+    --wght: "wght" 800;
+    --slnt: "slnt" -15;
+    --casl: "CASL" 1;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 3px solid var(--other);
   }
 `
-
-const themeOptions = ["dark", "light", "synthWave84"]
 
 function ThemeToggle() {
   // eslint-disable-next-line no-unused-vars
@@ -41,11 +46,17 @@ function ThemeToggle() {
   const setTheme = newTheme =>
     dispatch({ type: `SET_THEME`, themeName: newTheme })
 
+  const isCurrentTheme = themeName => themeName === theme.name && "currentTheme"
+
   return (
     <ThemeOptionContainer>
       <P>Themes:</P>
       {themeOptions.map(themeOption => (
-        <ThemeOption key={themeOption} onClick={() => setTheme(themeOption)}>
+        <ThemeOption
+          key={themeOption}
+          onClick={() => setTheme(themeOption)}
+          className={isCurrentTheme(themeOption)}
+        >
           {themeOption}
         </ThemeOption>
       ))}
