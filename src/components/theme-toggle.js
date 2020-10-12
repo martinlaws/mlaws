@@ -29,10 +29,12 @@ const ThemeOption = styled.button`
     padding: 0;
 
     &:hover {
-      color: var(--accentSecondary);
+      background-color: var(--accentSecondary);
       border-color: var(--fontSecondary);
     }
   `
+
+const themeOptions = ['dark', 'light', 'synthWave84']
 
 function ThemeToggle() {
   // eslint-disable-next-line no-unused-vars
@@ -44,11 +46,9 @@ function ThemeToggle() {
   return (
     <ThemeOptionContainer>
       <P>Themes:</P>
-      <ThemeOption onClick={() => setTheme("dark")}>[Dark]</ThemeOption>
-      <ThemeOption onClick={() => setTheme("light")}>[Light]</ThemeOption>
-      <ThemeOption onClick={() => setTheme("synthWave84")}>
-        [SynthWave '84]
-      </ThemeOption>
+      { themeOptions.map( themeOption => (
+        <ThemeOption key={themeOption} onClick={() => setTheme(themeOption)}>{themeOption}</ThemeOption>
+      ))}
     </ThemeOptionContainer>
   )
 }
