@@ -36,7 +36,8 @@ const Nav = styled.nav`
 `
 
 const Sidebar = ({ siteTitle }) => {
-  const pathName = typeof window !== "undefined" ? window.location.pathname : ""
+  const pathName =
+    typeof window !== "undefined" ? window.location.pathname : "/"
   const isCurrentRoute = routeName => routeName === pathName && "isActive"
 
   return (
