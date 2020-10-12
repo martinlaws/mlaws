@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Emoji from "./emoji"
 import { devices, H1, StyledA, StyledLink } from "./base"
@@ -86,7 +85,10 @@ function Splash() {
     <>
       <Main>
         <ImageContainer>
-          <Image fluid={data.fileName.childImageSharp.fluid} />
+          <Image
+            fluid={data.fileName.childImageSharp.fluid}
+            alt="Pixel art version of Martin's headshot"
+          />
         </ImageContainer>
         <article>
           <P>

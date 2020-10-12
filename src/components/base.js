@@ -31,7 +31,9 @@ export const Main = styled.main`
 
 export const H1 = styled.h1`
   color: var(--fontPrimary);
-  --wght: "wght" 800;
+  --wght: "wght" 900;
+  // --casl: "CASL" 1;
+  --slnt: "slnt" 0;
 `
 
 export const P = styled.p`
@@ -72,15 +74,11 @@ export const LinkButton = styled.span`
 export const StyledLink = styled(Link)`
   color: var(--fontSecondary);
   --slnt: "slnt" 0;
-  --wght: "wght" 600;
-  text-decoration: underline;
+  --wght: "wght" 400;
   padding-top: 3px;
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: transparent;
   letter-spacing: 0.08em;
   line-height: 1.4em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   transition: all 0.1s ease 0s;
   width: max-content;
 

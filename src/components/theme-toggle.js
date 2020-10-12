@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { useTheme, themeOptions } from "../hooks/theme-context"
 
 const P = styled.p`
-  color: var(--fontSecondary);
+  background-color: var(--other);
+  color: var(--sidebarBg);
   font-style: italic;
   margin-bottom: 0;
 `
@@ -16,13 +17,12 @@ const ThemeOptionContainer = styled.div`
 
 const ThemeOption = styled.button`
   cursor: pointer;
-  transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+  transition: all 0.1s ease-in-out 0s;
   color: var(--fontSecondary);
   border: none;
-  letter-spacing: 0.04em;
-  line-height: 1.4em;
   background: none;
   padding: 0;
+  text-decoration: underline;
 
   &:hover,
   &:focus,
