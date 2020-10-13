@@ -29,8 +29,8 @@ const ThemeOption = styled.button`
     text-decoration: none;
   }
 
-  &.currentTheme::before {
-    content: "🎨";
+  &.currentTheme::after {
+    content: " 🎨";
   }
 
   &:focus {

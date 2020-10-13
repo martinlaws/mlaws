@@ -75,8 +75,8 @@ const NavLink = styled(StyledLink)`
   &.isActive {
     color: var(--fontPrimary);
   }
-  &.isActive::before {
-    content: "📍";
+  &.isActive::after {
+    content: " 📍";
   }
 `
 
@@ -85,8 +85,8 @@ const StyledA = styled(BaseStyledA)`
   &:focus {
     color: var(--fontPrimary);
   }
-  &.isActive::before {
-    content: "📍";
+  &.isActive::after {
+    content: " 📍";
   }
 `
 
