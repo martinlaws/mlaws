@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Main, H1, P, CTALink } from "../components/base"
 import Img from "../components/image"
-import Emoji from "../components/emoji"
+import { Emoji } from "../components/emoji"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const query = graphql`

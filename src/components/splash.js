@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Emoji from "./emoji"
+import { Emoji } from "./emoji"
 import {
   devices,
   H1 as BaseH1,
@@ -35,6 +35,11 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 0.5rem;
+
+  @media ${devices.tablet} {
+    padding: 2rem;
+  }
 
   @media ${devices.laptop} {
     grid-template-columns: 1fr 1fr;

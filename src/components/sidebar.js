@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import ThemeToggle from "./theme-toggle"
 import { devices, H1 as DefaultH1, StyledLink, NavSectionHeading } from "./base"
-import Emoji from "./emoji"
+import { Emoji } from "./emoji"
 import { navItems } from "../utilities/constants"
 
 const Aside = styled.aside`
@@ -25,6 +25,7 @@ const Aside = styled.aside`
   }
 
   @media ${devices.tablet} {
+    grid-row: span 2;
     display: grid;
     grid-template-rows: 10rem 10rem 1fr;
     min-height: 100vh;

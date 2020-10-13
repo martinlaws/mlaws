@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Emoji from "./emoji"
+import { Emoji } from "./emoji"
 import {
   devices,
   H1 as BaseH1,

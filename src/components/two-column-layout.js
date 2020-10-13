@@ -3,18 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Sidebar from "./sidebar"
 import styled from "styled-components"
 import { devices } from "./base"
-
-const Main = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  padding: 1rem;
-  overflow-y: scroll auto;
-
-  @media ${devices.tablet} {
-    padding: 5rem;
-  }
-`
+import { Emoji } from "./emoji"
 
 const TwoColumnGrid = styled.div`
   display: grid;
@@ -27,6 +16,26 @@ const TwoColumnGrid = styled.div`
   @media ${devices.tablet} {
     grid-template-columns: max-content auto;
   }
+`
+
+const Main = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 0;
+  overflow-y: scroll auto;
+  min-height: calc(100vh);
+`
+
+const Footer = styled.footer`
+  background: var(--contentBg);
+  color: var(--fontPrimary);
+  height: 4rem;
+  display: flex;
+  flex-flow: row wrap;
+  line-break: word;
+  justify-content: center;
+  align-items: center;
 `
 
 function TwoColumnLayout({ children }) {
@@ -47,7 +56,15 @@ function TwoColumnLayout({ children }) {
       <TwoColumnGrid>
         <Sidebar siteTitle={title} />
 
-        <Main>{children}</Main>
+        <Main>
+          {children}
+
+          <Footer>
+            Made with <Emoji label="heart" symbol="♥️" marginLoose /> +
+            <Emoji label="coffee" symbol="☕" marginLoose /> in
+            <Emoji label="Canada" symbol="🇨🇦" marginLoose />
+          </Footer>
+        </Main>
       </TwoColumnGrid>
     </>
   )
