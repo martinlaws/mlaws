@@ -4,6 +4,7 @@ export const navItems = [
   { name: "code", label: "code", path: "/code/" },
   { name: "speaking", label: "speaking", path: "/speaking/" },
   { name: "thoughts", label: "writing", path: "/writing/" },
+  { name: "reading", label: "reading", path: "/reading/" },
 ]
 
 export const talks = [
@@ -133,6 +134,46 @@ export const social = [
     title: "email",
     subhead: "mlaws@hey.com",
     path: "mailto:mlaws@hey.com",
+    internalLink: false,
+  },
+]
+
+export const reading = [
+  {
+    title: "Search Inside Yourself",
+    subhead: "Chade-Meng Tan",
+    path: "https://www.goodreads.com/book/show/12921211-search-inside-yourself",
+    internalLink: false,
+  },
+  {
+    title: "Meeting Design",
+    subhead: "Kevin Hoffman",
+    path: "https://www.goodreads.com/book/show/36687954-meeting-design",
+    internalLink: false,
+  },
+  {
+    title: "I Know This to Be True",
+    subhead: "Ruth Bader Ginsburg",
+    path: "https://www.goodreads.com/book/show/52607358-i-know-this-to-be-true",
+    internalLink: false,
+  },
+  {
+    title: "Devotions",
+    subhead: "Mary Oliveer",
+    path: "https://www.goodreads.com/book/show/34272476-devotions",
+    internalLink: false,
+  },
+  {
+    title: "Meditations",
+    subhead: "Marcus Aurelius",
+    path: "https://www.goodreads.com/book/show/30659.Meditations",
+    internalLink: false,
+  },
+  {
+    title: "The Gifts of Imperfection",
+    subhead: "Brené Brown",
+    path:
+      "https://www.goodreads.com/book/show/7015403-the-gifts-of-imperfection",
     internalLink: false,
   },
 ]
