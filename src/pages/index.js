@@ -10,7 +10,6 @@ const IndexPage = () => {
       <SEO
         title="Martin Laws | UX Developer"
         description="I'm a Senior UX Developer @ Shopify, design thinker + tech speaker, recovering entrepreneur, and dog father."
-        image="images/martin.png"
       />
       <Splash />
     </Layout>

@@ -3,6 +3,9 @@ module.exports = {
     title: `Martin Laws`,
     description: `UX Developer, design thinker, dog dad.`,
     author: `@martinlaws`,
+    url: "https://mlaws.ca",
+    image: "/images/martin.png",
+    twitterUsername: "@martinblaws",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
