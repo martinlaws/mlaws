@@ -4,7 +4,7 @@ import Sidebar from "./sidebar"
 import styled from "styled-components"
 import { devices } from "./base"
 
-const Main = styled.main`
+const Main = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -19,13 +19,13 @@ const Main = styled.main`
 const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr;
+  grid-template-rows: max-content auto;
   min-height: 100vh;
   width: 100vw;
   background-color: var(--contentBg);
 
   @media ${devices.tablet} {
-    grid-template-columns: 280px auto;
+    grid-template-columns: max-content auto;
   }
 `
 

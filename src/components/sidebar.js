@@ -5,6 +5,7 @@ import styled from "styled-components"
 import ThemeToggle from "./theme-toggle"
 import { devices, H1 as DefaultH1, StyledLink, NavSectionHeading } from "./base"
 import Emoji from "./emoji"
+import { navItems } from "../utilities/constants"
 
 const Aside = styled.aside`
   display: grid;
@@ -142,21 +143,15 @@ const Sidebar = ({ siteTitle }) => {
         </H1>
         <Nav>
           <NavSectionHeading>Pages</NavSectionHeading>
-          <NavLink className={isCurrentRoute("/")} to="/">
-            Martin Who?
-          </NavLink>
-          <NavLink className={isCurrentRoute("/work/")} to="/work/">
-            Work
-          </NavLink>
-          <NavLink className={isCurrentRoute("/writing/")} to="/writing/">
-            Writing
-          </NavLink>
-          <NavLink className={isCurrentRoute("/speaking/")} to="/speaking/">
-            Speaking
-          </NavLink>
-          <NavLink className={isCurrentRoute("/contact/")} to="/contact/">
-            Contact
-          </NavLink>
+          {navItems.map((navItem, index) => (
+            <NavLink
+              key={index}
+              className={isCurrentRoute(navItem.path)}
+              to={navItem.path}
+            >
+              {navItem.label}
+            </NavLink>
+          ))}
         </Nav>
 
         <ThemeToggle />

@@ -75,6 +75,7 @@ export const StyledLink = styled(Link)`
   color: var(--fontSecondary);
   --slnt: "slnt" 0;
   --wght: "wght" 400;
+  --mono: "MONO" 1;
   padding-top: 3px;
   letter-spacing: 0.08em;
   line-height: 1.4em;
@@ -86,7 +87,7 @@ export const StyledLink = styled(Link)`
   &:focus,
   &.isActive {
     color: var(--fontPrimary);
-    --wght: "wght" 800;
+    --wght: "wght" 900;
     --slnt: "slnt" -15;
     --casl: "CASL" 1;
     text-decoration: none;
@@ -99,24 +100,16 @@ export const StyledLink = styled(Link)`
 
 export const StyledA = styled.a`
   color: var(--fontSecondary);
+  --mono: "MONO" 1;
   --slnt: "slnt" 0;
-  --wght: "wght" 600;
-  text-decoration: underline;
-  padding-top: 3px;
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: transparent;
-  letter-spacing: 0.08em;
-  line-height: 1.4em;
-  text-transform: uppercase;
+  --wght: "wght" 400;
   transition: all 0.1s ease 0s;
-  width: max-content;
 
   &:hover,
   &:focus,
   &.isActive {
     color: var(--fontPrimary);
-    --wght: "wght" 800;
+    --wght: "wght" 900;
     --slnt: "slnt" -15;
     --casl: "CASL" 1;
     text-decoration: none;
@@ -129,7 +122,7 @@ export const StyledA = styled.a`
 
 export const NavSectionHeading = styled.p`
   color: var(--other);
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   font-size: 2rem;
   line-height: 2rem;
   --wght: "wght" 900;

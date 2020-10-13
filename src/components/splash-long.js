@@ -78,7 +78,7 @@ const Subhead = styled(P)`
   margin-top: 0;
 `
 
-function Splash() {
+function SplashLong() {
   const data = useStaticQuery(query)
   return (
     <>
@@ -137,10 +137,14 @@ function Splash() {
             </StyledA>{" "}
             player, and all-around <Emoji symbol="💩" label="shit" /> disturber.
           </P>
+          <div>
+            <StyledLink to="/work/">see my work</StyledLink>
+            <StyledLink to="/maya/">show me the dog already</StyledLink>
+          </div>
         </article>
       </Main>
     </>
   )
 }
 
-export default Splash
+export default SplashLong
