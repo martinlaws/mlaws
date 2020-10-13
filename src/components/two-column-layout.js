@@ -24,18 +24,26 @@ const Main = styled.div`
   justify-content: space-between;
   padding: 0;
   overflow-y: scroll auto;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 8rem);
+
+  @media ${devices.tablet} {
+    min-height: 100vh;
+  }
 `
 
 const Footer = styled.footer`
   background: var(--contentBg);
   color: var(--fontPrimary);
-  height: 4rem;
+  min-height: 4rem;
   display: flex;
-  flex-flow: row wrap;
-  line-break: word;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
+
+  @media ${devices.tablet} {
+    flex-flow: column nowrap;
+  }
 `
 
 function TwoColumnLayout({ children }) {
@@ -60,9 +68,13 @@ function TwoColumnLayout({ children }) {
           {children}
 
           <Footer>
-            Made with <Emoji label="heart" symbol="♥️" marginLoose /> +
-            <Emoji label="coffee" symbol="☕" marginLoose /> in
-            <Emoji label="Canada" symbol="🇨🇦" marginLoose />
+            <div>
+              Made with
+              <Emoji label="heart" symbol="♥️" marginLoose />+
+              <Emoji label="coffee" symbol="☕" marginLoose />
+              in
+              <Emoji label="Canada" symbol="🇨🇦" marginLoose />
+            </div>
           </Footer>
         </Main>
       </TwoColumnGrid>

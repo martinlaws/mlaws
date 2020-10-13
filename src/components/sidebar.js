@@ -3,9 +3,15 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
 import ThemeToggle from "./theme-toggle"
-import { devices, H1 as DefaultH1, StyledLink, NavSectionHeading } from "./base"
+import {
+  devices,
+  H1 as DefaultH1,
+  StyledLink,
+  StyledA as BaseStyledA,
+  NavSectionHeading,
+} from "./base"
 import { Emoji } from "./emoji"
-import { navItems } from "../utilities/constants"
+import { navItems, social as socialItems } from "../utilities/constants"
 
 const Aside = styled.aside`
   display: grid;
@@ -27,8 +33,8 @@ const Aside = styled.aside`
   @media ${devices.tablet} {
     grid-row: span 2;
     display: grid;
-    grid-template-rows: 6rem 1fr 1fr;
-    min-height: 100vh;
+    grid-template-rows: 6rem 1fr 1fr max-content;
+    min-height: 100%;
   }
 `
 
@@ -63,6 +69,20 @@ const H1 = styled(DefaultH1)`
 `
 
 const NavLink = styled(StyledLink)`
+  &:hover,
+  &:focus {
+    color: var(--fontPrimary);
+  }
+  &.isActive::before {
+    content: "📍";
+  }
+`
+
+const StyledA = styled(BaseStyledA)`
+  &:hover,
+  &:focus {
+    color: var(--fontPrimary);
+  }
   &.isActive::before {
     content: "📍";
   }
@@ -138,9 +158,7 @@ const Sidebar = ({ siteTitle }) => {
       </HamburgerMenu>
       <Aside className={showSidebarOnMobile && "showSidebarOnMobile"}>
         <H1>
-          <LogoLink to="/" style={{}}>
-            {siteTitle}
-          </LogoLink>
+          <LogoLink to="/">{siteTitle}</LogoLink>
         </H1>
         <Nav>
           <NavSectionHeading>Pages</NavSectionHeading>
@@ -152,6 +170,20 @@ const Sidebar = ({ siteTitle }) => {
             >
               {navItem.label}
             </NavLink>
+          ))}
+        </Nav>
+        <Nav>
+          <NavSectionHeading>Social</NavSectionHeading>
+          {socialItems.map((socialItem, index) => (
+            <StyledA
+              key={index}
+              href={socialItem.path}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={socialItem.title}
+            >
+              {socialItem.title}
+            </StyledA>
           ))}
         </Nav>
 

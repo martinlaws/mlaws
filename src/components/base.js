@@ -39,10 +39,20 @@ export const Main = styled.main`
 
   @media ${devices.laptop} {
     grid-template-columns: 1fr 1fr;
+    margin: 0;
   }
 
   .padded-bottom {
     margin-bottom: 2rem;
+  }
+`
+
+export const SingleColumnMain = styled(Main)`
+  margin: 0;
+  margin: 1rem 0.5rem;
+  @media ${devices.laptop} {
+    grid-template-columns: 1fr;
+    margin: 0;
   }
 `
 
@@ -56,7 +66,6 @@ export const H1 = styled.h1`
 
 export const P = styled.p`
   color: var(--fontSecondary);
-  font-style: italic;
 `
 
 export const CTALink = styled(Link)`

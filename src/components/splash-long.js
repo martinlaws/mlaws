@@ -57,7 +57,7 @@ function SplashLong() {
           </P>
           <H1>Senior UX Developer</H1>
           <Subhead>
-            and proud <StyledLink to="/maya">dogfather</StyledLink>.
+            and proud <StyledLink to="/maya">dog father</StyledLink>.
           </Subhead>
           <P>
             Thrilled to be the new guy at{" "}

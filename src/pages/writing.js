@@ -3,37 +3,17 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Table from "../components/table"
-import { Main, H1, CTALink } from "../components/base"
-
-const site = {
-  articles: [
-    {
-      title: "Low Tide, High Tide",
-      date: "April 2020",
-      path: "/writing/low-tide-high-tide/",
-    },
-    {
-      title: "Design Thinking for Developers",
-      date: "January 2020",
-      path: "/writing/design-thinking-for-developers/",
-    },
-    {
-      title: "InVision DSM",
-      date: "November 2019",
-      path: "/writing/invision-dsm/",
-    },
-  ],
-}
+import { SingleColumnMain as Main, H1 } from "../components/base"
+import { writing } from "../utilities/constants"
 
 const Writing = () => {
   return (
     <Layout>
-      <SEO title="Martin Laws | Writing | UX Developer" />
+      <SEO title="Writing // Martin Laws // UX Developer" />
       <Main>
         <H1>Selected writing</H1>
 
-        <Table data={site.articles} />
-        <CTALink to="/">Go back to the homepage</CTALink>
+        <Table data={writing} />
       </Main>
     </Layout>
   )

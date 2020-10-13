@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Main, H1 as BaseH1, CTALink, StyledA } from "../components/base"
+import { Main, H1 as BaseH1, StyledA } from "../components/base"
 import { Emoji } from "../components/emoji"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -47,7 +47,7 @@ const Maya = () => {
 
   return (
     <Layout>
-      <SEO title="Maya D'Amico-Laws | UX Doggo" />
+      <SEO title="Maya B. D'Amico-Laws // UX doggo" />
       <Main>
         <ImageContainer>
           <Image
@@ -80,7 +80,6 @@ const Maya = () => {
             As a result, my tongue hangs free as the wind it whistles in. Thanks
             for reading!
           </P>
-          <CTALink to="/">Go back to the homepage</CTALink>
         </article>
       </Main>
     </Layout>
