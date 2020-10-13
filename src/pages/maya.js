@@ -56,7 +56,7 @@ const Maya = () => {
         <ImageContainer>
           <Image
             fluid={data.fileName.childImageSharp.fluid}
-            alt="Pixel art version of Martin's headshot"
+            alt="Maya, a Dane/Hound mutt with her tounge hanging out."
           />
         </ImageContainer>
         <article>
