@@ -40,6 +40,10 @@ const Subhead = styled(P)`
   margin-top: 0;
 `
 
+const BioSection = styled.div`
+  margin: 2rem 0;
+`
+
 function Splash() {
   const data = useStaticQuery(query)
   return (
@@ -52,52 +56,45 @@ function Splash() {
           />
         </ImageContainer>
         <article>
+          <BioSection>
+            <P>Hi, there!</P>
+            <H1>
+              I'm Martin <Emoji symbol="👋🏻" label="waving hand" />
+            </H1>
+          </BioSection>
           <P>
-            Hi, I'm Martin <Emoji symbol="👋🏻" label="waving hand" />
-          </P>
-          <H1>Senior UX Developer</H1>
-          <Subhead>
-            and proud <StyledLink to="/maya">dog father</StyledLink>.
-          </Subhead>
-          <P>
-            Thrilled to be the new guy at{" "}
+            I'm a Senior UX Developer @{" "}
             <StyledA
-              href="https://ux.shopify.com/"
+              href="https://www.shopify.com/"
               target="_blank"
-              className="accent"
+              rel="noopener noreferrer"
             >
               Shopify
             </StyledA>
-            .
+            ,
           </P>
           <P>
-            Previously:{" "}
-            <StyledA href="https://consultlowtide.ca" target="_blank">
-              Low Tide Consulting
-            </StyledA>
-            ,{" "}
-            <StyledA href="https://www.lighthouselabs.ca/" target="_blank">
-              Lighthouse Labs
-            </StyledA>
-            , and{" "}
+            frequent <StyledLink to="/speaking/">speaker</StyledLink>, past{" "}
             <StyledA
-              href="https://www.linkedin.com/in/martinlaws/"
+              href="https://consultlowtide.ca/"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              others
+              founder
             </StyledA>
-            .
+            ,
           </P>
-          <P className="padded-bottom">
-            Wannabe chef, extremely competitive fantasy{" "}
+          <P>
+            fantasy{" "}
             <StyledA
               href="https://www.fantasysurvivorgame.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Survivor
               <Emoji symbol="™" label="Trademark symbol" />
             </StyledA>{" "}
-            player, and all-around <Emoji symbol="💩" label="shit" /> disturber.
+            player, and <StyledLink to="/maya">dog father</StyledLink>.
           </P>
         </article>
       </Main>
