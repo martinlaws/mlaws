@@ -159,7 +159,7 @@ export const reading = [
   },
   {
     title: "Devotions",
-    subhead: "Mary Oliveer",
+    subhead: "Mary Oliver",
     path: "https://www.goodreads.com/book/show/34272476-devotions",
     internalLink: false,
   },
