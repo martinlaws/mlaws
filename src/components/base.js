@@ -23,10 +23,27 @@ export const devices = {
 }
 
 export const Main = styled.main`
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 1rem 0.5rem;
   color: var(--fontPrimary);
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem;
+
+  @media ${devices.tablet} {
+    padding: 2rem;
+  }
+
+  @media ${devices.laptop} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .padded-bottom {
+    margin-bottom: 2rem;
+  }
 `
 
 export const H1 = styled.h1`
@@ -34,6 +51,7 @@ export const H1 = styled.h1`
   --wght: "wght" 900;
   --mono: "MONO" 0;
   --slnt: "slnt" 0;
+  --casl: "CASL" 0.2;
 `
 
 export const P = styled.p`
@@ -49,8 +67,6 @@ export const CTALink = styled(Link)`
   border-style: solid;
   border-width: 0px 0px 2px;
   border-color: transparent;
-  letter-spacing: 0.04em;
-  line-height: 1.4em;
   text-transform: uppercase;
   transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
 
@@ -71,14 +87,12 @@ export const LinkButton = styled.span`
   }
 `
 
-export const StyledLink = styled(Link)`
+export const BaseStyledLink = styled(Link)`
   color: var(--fontSecondary);
   --slnt: "slnt" 0;
   --wght: "wght" 400;
   --mono: "MONO" 1;
   padding-top: 3px;
-  letter-spacing: 0.08em;
-  line-height: 1.4em;
   text-transform: lowercase;
   transition: all 0.1s ease 0s;
   width: max-content;
@@ -98,7 +112,7 @@ export const StyledLink = styled(Link)`
   }
 `
 
-export const StyledA = styled.a`
+export const BaseStyledA = styled.a`
   color: var(--fontSecondary);
   --mono: "MONO" 1;
   --slnt: "slnt" 0;
@@ -120,11 +134,26 @@ export const StyledA = styled.a`
   }
 `
 
+export const StyledA = styled(BaseStyledA)`
+  &:hover,
+  &:focus {
+    color: var(--fontSecondary);
+  }
+`
+
+export const StyledLink = styled(BaseStyledLink)`
+  &:hover,
+  &:focus {
+    color: var(--fontSecondary);
+  }
+`
+
 export const NavSectionHeading = styled.p`
   color: var(--other);
   margin-bottom: 0.5rem;
   font-size: 2rem;
   line-height: 2rem;
   --wght: "wght" 900;
-  --mono: "MONO" 1;
+  --mono: "MONO" 0;
+  --casl: "CASL" 0.5;
 `

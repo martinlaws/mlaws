@@ -1,12 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Emoji } from "./emoji"
-import {
-  devices,
-  H1 as BaseH1,
-  StyledA as BaseStyledA,
-  StyledLink as BaseStyledLink,
-} from "./base"
+import { Main, H1 as BaseH1, StyledA, StyledLink } from "./base"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -26,30 +21,6 @@ const ImageContainer = styled.div`
   max-width: 600px;
 `
 
-const Main = styled.main`
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 1rem 0.5rem;
-  color: var(--fontPrimary);
-  max-width: 1440px;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 0.5rem;
-
-  @media ${devices.tablet} {
-    padding: 2rem;
-  }
-
-  @media ${devices.laptop} {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .padded-bottom {
-    margin-bottom: 2rem;
-  }
-`
-
 const P = styled.p`
   color: var(--fontPrimary);
   margin-bottom: 0.25rem;
@@ -58,20 +29,6 @@ const P = styled.p`
   --wght: "wght" 400;
   --slnt: "slnt" 0;
   --CRSV: "CRSV" 0.5;
-`
-
-const StyledA = styled(BaseStyledA)`
-  &:hover,
-  &:focus {
-    color: var(--fontSecondary);
-  }
-`
-
-const StyledLink = styled(BaseStyledLink)`
-  &:hover,
-  &:focus {
-    color: var(--fontSecondary);
-  }
 `
 
 const H1 = styled(BaseH1)`

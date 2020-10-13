@@ -27,7 +27,7 @@ const Aside = styled.aside`
   @media ${devices.tablet} {
     grid-row: span 2;
     display: grid;
-    grid-template-rows: 10rem 10rem 1fr;
+    grid-template-rows: 6rem 1fr 1fr;
     min-height: 100vh;
   }
 `
