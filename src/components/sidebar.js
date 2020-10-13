@@ -86,6 +86,7 @@ const HamburgerMenu = styled.div`
 
 const HelpText = styled.span`
   font-size: 1rem;
+  margin-right: 1rem;
 `
 
 const Button = styled.button`
@@ -97,7 +98,6 @@ const Button = styled.button`
   align-items: center;
   background: transparent;
   border: none;
-  gap: 1rem;
   color: var(--fontSecondary);
   --casl: "CASL" 1;
   --wght: "wght" 400;
