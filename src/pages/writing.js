@@ -11,7 +11,7 @@ const Writing = () => {
     <Layout>
       <SEO title="Writing // Martin Laws // UX Developer" />
       <Main>
-        <H1>Selected writing</H1>
+        <H1>Things I remembered to write down</H1>
 
         <Table data={writing} />
       </Main>

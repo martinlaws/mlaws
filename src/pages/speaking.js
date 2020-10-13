@@ -11,7 +11,7 @@ const Speaking = () => {
       <SEO title="Speaking // Martin Laws // UX Developer" />
 
       <Main>
-        <H1>Selected speaking</H1>
+        <H1>Words I spoke</H1>
 
         <Table data={talks} />
       </Main>

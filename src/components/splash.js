@@ -35,11 +35,6 @@ const H1 = styled(BaseH1)`
   margin-bottom: 0.5rem;
 `
 
-const Subhead = styled(P)`
-  padding-bottom: 2rem;
-  margin-top: 0;
-`
-
 const BioSection = styled.div`
   margin: 2rem 0;
 `

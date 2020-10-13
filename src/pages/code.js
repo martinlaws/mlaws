@@ -11,7 +11,7 @@ const Code = () => {
       <SEO title="Code // Martin Laws // UX Developer" />
 
       <Main>
-        <H1>Selected projects</H1>
+        <H1>Tech debt I invented</H1>
 
         <Table data={projects} />
       </Main>
