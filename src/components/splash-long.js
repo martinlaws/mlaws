@@ -20,6 +20,7 @@ export const query = graphql`
 
 const ImageContainer = styled.div`
   max-width: 600px;
+  align-self: flex-start;
 `
 
 const P = styled.p`

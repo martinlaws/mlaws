@@ -21,6 +21,7 @@ const query = graphql`
 
 const ImageContainer = styled.div`
   max-width: 600px;
+  align-self: flex-start;
 `
 
 const P = styled.p`
@@ -60,18 +61,18 @@ const Maya = () => {
         </ImageContainer>
         <article>
           <H1>
-            Henlo! I'm Maya <Emoji label="paw" symbol="🦮" />
+            Henlo! I'm Maya <Emoji label="paw" symbol="🐾" />
           </H1>
           <Subhead>
-            also known as{" "}
+            better known as{" "}
             <StyledA
               href="https://instagram.com/mayanoteef"
               target="_blank"
               rel="noreferrer noopener"
             >
               @mayanoteef
-            </StyledA>
-            .
+            </StyledA>{" "}
+            on instagram.
           </Subhead>
           <P>
             I am a woman on a mission: maximum comfort. I have a couple of
