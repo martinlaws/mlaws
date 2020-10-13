@@ -59,7 +59,7 @@ export const writing = [
   {
     title: "My thoughts, barely structured",
     subhead: "thoughts.mlaws.ca",
-    date: "forever ongoing ✌🏻",
+    date: "ongoing ✌🏻",
     path: "https://thoughts.mlaws.ca/",
     internalLink: false,
   },

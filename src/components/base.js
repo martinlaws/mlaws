@@ -96,7 +96,7 @@ export const LinkButton = styled.span`
   }
 `
 
-export const BaseStyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   color: var(--fontSecondary);
   --slnt: "slnt" 0;
   --wght: "wght" 400;
@@ -109,8 +109,7 @@ export const BaseStyledLink = styled(Link)`
   &:hover,
   &:focus,
   &.isActive {
-    color: var(--fontPrimary);
-    --wght: "wght" 900;
+    --wght: "wght" 800;
     --slnt: "slnt" -15;
     --casl: "CASL" 1;
     text-decoration: none;
@@ -121,7 +120,7 @@ export const BaseStyledLink = styled(Link)`
   }
 `
 
-export const BaseStyledA = styled.a`
+export const StyledA = styled.a`
   color: var(--fontSecondary);
   --mono: "MONO" 1;
   --slnt: "slnt" 0;
@@ -131,8 +130,7 @@ export const BaseStyledA = styled.a`
   &:hover,
   &:focus,
   &.isActive {
-    color: var(--fontPrimary);
-    --wght: "wght" 900;
+    --wght: "wght" 800;
     --slnt: "slnt" -15;
     --casl: "CASL" 1;
     text-decoration: none;
@@ -143,22 +141,8 @@ export const BaseStyledA = styled.a`
   }
 `
 
-export const StyledA = styled(BaseStyledA)`
-  &:hover,
-  &:focus {
-    color: var(--fontSecondary);
-  }
-`
-
-export const StyledLink = styled(BaseStyledLink)`
-  &:hover,
-  &:focus {
-    color: var(--fontSecondary);
-  }
-`
-
 export const NavSectionHeading = styled.p`
-  color: var(--other);
+  color: var(--fontPrimary);
   margin-bottom: 0.5rem;
   font-size: 2rem;
   line-height: 2rem;

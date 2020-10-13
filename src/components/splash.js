@@ -69,27 +69,22 @@ function Splash() {
             ,
           </P>
           <P>
-            frequent <StyledLink to="/speaking/">speaker</StyledLink>, past{" "}
+            design thinker + tech{" "}
+            <StyledLink to="/speaking/">speaker</StyledLink>,
+          </P>
+          <P>
+            recovering{" "}
             <StyledA
               href="https://consultlowtide.ca/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              founder
+              entrepreneur
             </StyledA>
             ,
           </P>
           <P>
-            fantasy{" "}
-            <StyledA
-              href="https://www.fantasysurvivorgame.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Survivor
-              <Emoji symbol="™" label="Trademark symbol" />
-            </StyledA>{" "}
-            player, and <StyledLink to="/maya">dog father</StyledLink>.
+            and <StyledLink to="/maya">dog father</StyledLink>.
           </P>
         </article>
       </Main>

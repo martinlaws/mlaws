@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
@@ -38,19 +37,20 @@ const Aside = styled.aside`
   }
 `
 
-const LogoLink = styled(Link)`
-  color: var(--fontPrimary);
-  text-decoration: none;
-  margin: 0;
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: transparent;
+const LogoLink = styled(StyledLink)`
   line-height: 1.2em;
-  transition: border-color 0.2s ease 0s, color 0.2s ease 0s;
+  transition: all 0.1s ease 0s;
+  color: var(--fontPrimary);
+  --wght: "wght" 900;
+  --casl: "CASL" 1;
+  --slnt: "slnt" -15;
 
   &:hover {
-    color: var(--accentPrimary);
-    border-color: var(--fontSecondary);
+    color: var(--fontSecondary);
+    text-decoration: none;
+    --casl: "CASL" 0;
+    --slnt: "slnt" 0;
+    --wght: "wght" 900;
   }
 `
 
@@ -70,7 +70,8 @@ const H1 = styled(DefaultH1)`
 
 const NavLink = styled(StyledLink)`
   &:hover,
-  &:focus {
+  &:focus,
+  &.isActive {
     color: var(--fontPrimary);
   }
   &.isActive::before {

@@ -87,6 +87,7 @@ const P = styled.p`
   margin: 0;
   color: var(--fontPrimary);
   --wght: "wght" 800;
+  align-self: center;
 
   &.subhead {
     text-decoration: none;
