@@ -69,6 +69,18 @@ const LowTide = () => {
             tooling) and React to build beautiful, performant, well-tested web
             experiences.
           </P>
+
+          <P>
+            Unfortunately, this page is still incomplete. Learn more at{" "}
+            <StyledA
+              href="https://consultlowtide.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              consultlowtide.ca
+            </StyledA>
+            .
+          </P>
         </article>
       </Main>
     </Layout>
