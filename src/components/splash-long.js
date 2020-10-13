@@ -86,8 +86,8 @@ function SplashLong() {
             player.
           </P>
           <P>
-            Most of my days are spent building things in browsers for humans, as
-            thoughtfully as I can. I work as a Senior UX Developer at{" "}
+            Most of my days are spent building things in browsers for humans. I
+            work as a Senior UX Developer at{" "}
             <StyledA
               href="https://www.shopify.com/"
               target="_blank"
@@ -182,14 +182,7 @@ function SplashLong() {
               instagram
             </StyledA>{" "}
             but can most reliably be reached by email at{" "}
-            <StyledA
-              href="mailto:mlaws@hey.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              mlaws@hey.com
-            </StyledA>
-            .
+            <StyledA href="mailto:mlaws@hey.com">mlaws@hey.com</StyledA>.
           </P>
         </article>
       </Main>

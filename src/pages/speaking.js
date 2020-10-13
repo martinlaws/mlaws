@@ -8,7 +8,10 @@ import { talks } from "../utilities/constants"
 const Speaking = () => {
   return (
     <Layout>
-      <SEO title="Speaking // Martin Laws // UX Developer" />
+      <SEO
+        title="Speaking // Martin Laws // UX Developer"
+        description="Words I spoke."
+      />
 
       <Main>
         <H1>Words I spoke</H1>

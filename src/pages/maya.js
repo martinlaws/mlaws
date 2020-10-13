@@ -47,7 +47,10 @@ const Maya = () => {
 
   return (
     <Layout>
-      <SEO title="Maya B. D'Amico-Laws // UX doggo" />
+      <SEO
+        title="Maya B. D'Amico-Laws // UX doggo"
+        description="Maya B. D'Amico-Laws // @mayanoteef on instagram"
+      />
       <Main>
         <ImageContainer>
           <Image

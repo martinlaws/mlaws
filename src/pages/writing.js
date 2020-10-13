@@ -9,7 +9,10 @@ import { writing } from "../utilities/constants"
 const Writing = () => {
   return (
     <Layout>
-      <SEO title="Writing // Martin Laws // UX Developer" />
+      <SEO
+        title="Writing // Martin Laws // UX Developer"
+        description="Things I remembered to write down"
+      />
       <Main>
         <H1>Things I remembered to write down</H1>
 

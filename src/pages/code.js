@@ -8,7 +8,10 @@ import { projects } from "../utilities/constants"
 const Code = () => {
   return (
     <Layout>
-      <SEO title="Code // Martin Laws // UX Developer" />
+      <SEO
+        title="Code // Martin Laws // UX Developer"
+        description="Tech debt I invented."
+      />
 
       <Main>
         <H1>Tech debt I invented</H1>

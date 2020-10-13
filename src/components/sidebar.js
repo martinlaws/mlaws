@@ -22,7 +22,7 @@ const Aside = styled.aside`
   padding: 2rem;
   color: var(--fontSecondary);
   display: none;
-  gap: 2rem;
+  gap: 4rem;
 
   &.showSidebarOnMobile {
     display: grid;
@@ -31,6 +31,7 @@ const Aside = styled.aside`
 
   @media ${devices.tablet} {
     grid-row: span 2;
+    gap: 2rem;
     display: grid;
     grid-template-rows: 6rem 1fr 1fr max-content;
     min-height: 100%;
