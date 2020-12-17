@@ -75,6 +75,13 @@ export const writing = [
 
 export const projects = [
   {
+    title: "Shopify Commerce Awards 2020",
+    subhead: "shopify.com/commerce-awards",
+    date: "December 2020",
+    path: "https://www.shopify.com/commerce-awards",
+    internalLink: false,
+  },
+  {
     title:
       "Measuring Rt, a key measure of how fast COVID-19 is growing across Canada",
     subhead: "rt-canada.ca",
