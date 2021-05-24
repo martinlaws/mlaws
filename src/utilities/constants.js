@@ -183,4 +183,68 @@ export const reading = [
       "https://www.goodreads.com/book/show/7015403-the-gifts-of-imperfection",
     internalLink: false,
   },
+  {
+    title: "Wherever You Go There You Are",
+    subhead: "Jon Kabat-Zin",
+    path:
+      "https://www.goodreads.com/book/show/14096.Wherever_You_Go_There_You_Are",
+    internalLink: false,
+  },
+  {
+    title: "How to Avoid a Climate Disaster",
+    subhead: "Bill Gates",
+    path:
+      "https://www.goodreads.com/book/show/52275335-how-to-avoid-a-climate-disaster",
+    internalLink: false,
+  },
+  {
+    title: "The ONE Thing",
+    subhead: "Gary Keller",
+    path: "https://www.goodreads.com/book/show/16256798-the-one-thing",
+    internalLink: false,
+  },
+  {
+    title: "The ONE Thing",
+    subhead: "Gary Keller",
+    path: "https://www.goodreads.com/book/show/16256798-the-one-thing",
+    internalLink: false,
+  },
+  {
+    title: "Indistractable",
+    subhead: "Nir Eyal",
+    path: "https://www.goodreads.com/book/show/44595007-indistractable",
+    internalLink: false,
+  },
+  {
+    title: "Deep Work",
+    subhead: "Cal Newport",
+    path: "https://www.goodreads.com/book/show/25744928-deep-work",
+    internalLink: false,
+  },
+
+  {
+    title: "Digital Minimalism",
+    subhead: "Cal Newport",
+    path: "https://www.goodreads.com/book/show/40672036-digital-minimalism",
+    internalLink: false,
+  },
+  {
+    title: "Principles",
+    subhead: "Ray Dalio",
+    path: "https://www.goodreads.com/book/show/34536488-principles",
+    internalLink: false,
+  },
+  {
+    title: "A Promised Land",
+    subhead: "Barack Obama",
+    path: "https://www.goodreads.com/book/show/55361205-a-promised-land",
+    internalLink: false,
+  },
+
+  {
+    title: "Eat a Peach",
+    subhead: "David Chang",
+    path: "https://www.goodreads.com/book/show/51700803-eat-a-peach",
+    internalLink: false,
+  },
 ]
