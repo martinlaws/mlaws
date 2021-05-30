@@ -59,7 +59,7 @@ function Splash() {
             </H1>
           </BioSection>
           <P>
-            I'm a Senior UX Developer @{" "}
+            I'm a Senior Front End Developer + people lead @{" "}
             <StyledA
               href="https://www.shopify.com/"
               target="_blank"

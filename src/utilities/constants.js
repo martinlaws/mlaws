@@ -145,7 +145,28 @@ export const social = [
   },
 ]
 
-export const reading = [
+export const currentlyReading  = [
+  {
+    title: "Eat a Peach",
+    subhead: "David Chang",
+    path: "https://www.goodreads.com/book/show/51700803-eat-a-peach",
+    internalLink: false,
+  },
+  {
+    title: "Devotions",
+    subhead: "Mary Oliver",
+    path: "https://www.goodreads.com/book/show/34272476-devotions",
+    internalLink: false,
+  },
+  {
+    title: "The Hellfire Club",
+    subhead: "Jake Tapper",
+    path: "https://www.goodreads.com/book/show/34329347-the-hellfire-club",
+    internalLink: false,
+  },
+]
+
+export const recentlyRead = [
   {
     title: "Search Inside Yourself",
     subhead: "Chade-Meng Tan",
@@ -165,25 +186,6 @@ export const reading = [
     internalLink: false,
   },
   {
-    title: "Devotions",
-    subhead: "Mary Oliver",
-    path: "https://www.goodreads.com/book/show/34272476-devotions",
-    internalLink: false,
-  },
-  {
-    title: "Meditations",
-    subhead: "Marcus Aurelius",
-    path: "https://www.goodreads.com/book/show/30659.Meditations",
-    internalLink: false,
-  },
-  {
-    title: "The Gifts of Imperfection",
-    subhead: "Brené Brown",
-    path:
-      "https://www.goodreads.com/book/show/7015403-the-gifts-of-imperfection",
-    internalLink: false,
-  },
-  {
     title: "Wherever You Go There You Are",
     subhead: "Jon Kabat-Zin",
     path:
@@ -195,12 +197,6 @@ export const reading = [
     subhead: "Bill Gates",
     path:
       "https://www.goodreads.com/book/show/52275335-how-to-avoid-a-climate-disaster",
-    internalLink: false,
-  },
-  {
-    title: "The ONE Thing",
-    subhead: "Gary Keller",
-    path: "https://www.goodreads.com/book/show/16256798-the-one-thing",
     internalLink: false,
   },
   {
@@ -238,13 +234,6 @@ export const reading = [
     title: "A Promised Land",
     subhead: "Barack Obama",
     path: "https://www.goodreads.com/book/show/55361205-a-promised-land",
-    internalLink: false,
-  },
-
-  {
-    title: "Eat a Peach",
-    subhead: "David Chang",
-    path: "https://www.goodreads.com/book/show/51700803-eat-a-peach",
     internalLink: false,
   },
 ]

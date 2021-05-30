@@ -9,7 +9,7 @@ const IndexPage = () => {
     <Layout>
       <SEO
         title="Martin Laws | UX Developer"
-        description="I'm a Senior UX Developer @ Shopify, design thinker + tech speaker, recovering entrepreneur, and dog father."
+        description="I'm a Senior Front End Developer + people lead @ Shopify, design thinker + tech speaker, recovering entrepreneur, and dog father."
       />
       <SplashLong />
     </Layout>

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Emoji } from "./emoji"
-import { Main, H1 as BaseH1, StyledA, StyledLink } from "./base"
+import { Main, H1 as BaseH1, StyledA, StyledLink, Ital } from "./base"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { social } from "../utilities/constants"
@@ -45,13 +45,6 @@ const BioSection = styled.div`
   }
 `
 
-const Ital = styled.span`
-  --slnt: "slnt" -15;
-  --casl: "CASL" 1;
-  --wght: "wght" 200;
-  letter-spacing: 0.05em;
-`
-
 function SplashLong() {
   const data = useStaticQuery(query)
   return (
@@ -73,7 +66,7 @@ function SplashLong() {
             </H1>
           </BioSection>
           <P>
-            I'm a design thinker, front-end developer,{" "}
+            I'm a design thinker, developer, people lead,{" "}
             <StyledLink to="/maya">dog father</StyledLink>, coffee snob, LEGO
             enthusiast, and fantasy{" "}
             <StyledA
@@ -88,15 +81,18 @@ function SplashLong() {
           </P>
           <P>
             Most of my days are spent building things in browsers for humans. I
-            work as a Senior UX Developer at{" "}
+            work as a Senior Front End Developer/people lead (prev. Senior UX Developer) at{" "}
             <StyledA
               href="https://www.shopify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Shopify
-            </StyledA>{" "}
-            on the Ecosystem team. You can spot me in the wild at{" "}
+            </StyledA>.
+          </P>
+          <P>
+            My work centres around building powerful, performant, and inclusive experiences for developers. Learn more (and see my work in the wild)
+            at{" "}
             <StyledA
               href="https://www.shopify.com/partners"
               target="_blank"
@@ -139,7 +135,7 @@ function SplashLong() {
             >
               Canadian startups
             </StyledA>
-            . For more on where I worked prior to Low Tide, have a look at my{" "}
+            . For more on my work history, have a look at my{" "}
             <StyledA
               href={
                 social.find(socialItem => socialItem.title === "linkedin").path
@@ -153,8 +149,7 @@ function SplashLong() {
           </P>
           <P>
             I <StyledLink to="/speaking/">present regularly</StyledLink> on UX
-            Development and Design Thinking and have taught hundreds of students
-            at{" "}
+            Development and Design Thinking, and taught hundreds of students at{" "}
             <StyledA
               href="https://www.lighthouselabs.ca/"
               target="_blank"
@@ -162,7 +157,7 @@ function SplashLong() {
             >
               Lighthouse Labs
             </StyledA>{" "}
-            since 2016.
+            from 2016 through 2020.
           </P>
 
           <P>

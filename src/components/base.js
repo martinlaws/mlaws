@@ -64,8 +64,24 @@ export const H1 = styled.h1`
   --casl: "CASL" 0.2;
 `
 
+export const H2 = styled.h2`
+  margin-bottom: none;
+  color: var(--fontPrimary);
+  --wght: "wght" 900;
+  --mono: "MONO" 0;
+  --slnt: "slnt" 0;
+  --casl: "CASL" 0.2;
+`
+
 export const P = styled.p`
   color: var(--fontSecondary);
+`
+
+export const Ital = styled.span`
+  --slnt: "slnt" -15;
+  --casl: "CASL" 1;
+  --wght: "wght" 200;
+  letter-spacing: 0.05em;
 `
 
 export const CTALink = styled(Link)`
