@@ -9,7 +9,7 @@ const Speaking = () => {
   return (
     <Layout>
       <SEO
-        title="Speaking // Martin Laws // UX Developer"
+        title="Speaking // Martin Laws // Development Manager"
         description="Words I spoke."
       />
 
