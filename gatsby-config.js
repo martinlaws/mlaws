@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Martin Laws`,
-    description: `UX Developer, design thinker, dog dad.`,
+    description: `Development Manager, design thinker, dog dad.`,
     author: `@martinlaws`,
     url: "https://mlaws.ca",
     image: "/images/martin.png",
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Martin Laws | UX Developer`,
+        name: `Martin Laws | Development Manager`,
         short_name: `mlaws`,
         start_url: `/`,
         background_color: `#663399`,

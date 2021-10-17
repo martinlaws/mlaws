@@ -27,7 +27,7 @@ const Reading = () => {
   return (
     <Layout>
       <SEO
-        title="Reading // Martin Laws // UX Developer"
+        title="Reading // Martin Laws // Development Manager"
         description="Currently on my side table"
       />
       <MainWithSmallerGap>

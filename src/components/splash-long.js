@@ -66,32 +66,29 @@ function SplashLong() {
             </H1>
           </BioSection>
           <P>
-            I'm a design thinker, developer, people lead,{" "}
+            I'm a software development manager, design thinker,{" "}
             <StyledLink to="/maya">dog father</StyledLink>, coffee snob, LEGO
-            enthusiast, and fantasy{" "}
+            enthusiast, and{" "}
             <StyledA
               href="https://www.fantasysurvivorgame.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Survivor
+              fantasy Survivor
               <Emoji symbol="™" label="Trademark symbol" />
             </StyledA>{" "}
             player.
           </P>
           <P>
-            Most of my days are spent building things in browsers for humans. I
-            work as a Senior Front End Developer/people lead (prev. Senior UX Developer) at{" "}
+           I work as a Development Manager at{" "}
             <StyledA
               href="https://www.shopify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Shopify
-            </StyledA>.
-          </P>
-          <P>
-            My work centres around building powerful, performant, and inclusive experiences for developers. Learn more (and see my work in the wild)
+              Shopify{" "}
+            </StyledA> 
+             where I lead teams building powerful, performant, and inclusive experiences for developers. Learn more (and see my work in the wild)
             at{" "}
             <StyledA
               href="https://www.shopify.com/partners"

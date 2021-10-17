@@ -9,7 +9,7 @@ const Code = () => {
   return (
     <Layout>
       <SEO
-        title="Code // Martin Laws // UX Developer"
+        title="Code // Martin Laws // Development Manager"
         description="Tech debt I invented."
       />
 

@@ -10,7 +10,7 @@ const Writing = () => {
   return (
     <Layout>
       <SEO
-        title="Writing // Martin Laws // UX Developer"
+        title="Writing // Martin Laws // Development Manager"
         description="Things I remembered to write down"
       />
       <Main>
