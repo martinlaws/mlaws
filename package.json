@@ -1,9 +1,9 @@
 {
-  "name": "martin-laws-portfolio",
+  "name": "mlaws",
   "private": false,
   "description": "Martin Laws personal portfolio",
-  "version": "0.1.0",
-  "author": "Martin Laws <mlaws@hey.com>",
+  "version": "1.0.0",
+  "author": "Martin Laws <hey@mlaws.ca>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.12",
@@ -34,14 +34,13 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/martinlaws/mlaws"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/martinlaws/mlaws/issues"
   }
 }
