@@ -2,7 +2,7 @@
   "name": "mlaws",
   "private": false,
   "description": "Martin Laws personal portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Martin Laws <hey@mlaws.ca>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
