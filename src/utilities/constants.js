@@ -12,8 +12,7 @@ export const talks = [
     title: "Design & Development",
     subhead: "FITC Sessions",
     date: "November 2021",
-    path:
-      "https://docs.google.com/presentation/d/1S6guHnMEe_A0RMqw8Ywh9JwLyk3HDcRiFOST7W4ck50/edit?usp=sharing",
+    path: "https://fitc.ca/event/design_development/",
     internalLink: false,
   },
   {
