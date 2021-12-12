@@ -9,6 +9,21 @@ export const navItems = [
 
 export const talks = [
   {
+    title: "Design & Development",
+    subhead: "FITC Sessions",
+    date: "November 2021",
+    path: "https://fitc.ca/event/design_development/",
+    internalLink: false,
+  },
+  {
+    title: "Design & Development: A Match Made in Heaven or Oil and Water?",
+    subhead: "FITC: Web Unleashed",
+    date: "October 2021",
+    path:
+      "https://fitc.ca/presentation/design_and_development/",
+    internalLink: false,
+  },
+  {
     title: "Design Thinking for Developers: slides",
     subhead: "FITC: Web Unleashed",
     date: "October 2020",
