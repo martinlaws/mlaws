@@ -6,7 +6,7 @@
 
 ## ☕️ tl;dr
 
-This is the source code for [mlaws.ca](https://mlaws.ca). Look around! Make yourself at home. Let me know on [twitter](https://twitter.com/martinblaws) or by [email](mailto:mlaws@hey.com) if you want to get in touch, or feel free to create an issue on this repo. The site is built with Gatsby and doesn't use a CMS.
+This is the source code for [mlaws.ca](https://mlaws.ca). Look around! Make yourself at home. Let me know on [twitter](https://twitter.com/martinblaws) or by [email](mailto:hey@mlaws.ca) if you want to get in touch, or feel free to create an issue on this repo. The site is built with Gatsby and doesn't use a CMS.
 
 ## 🎓 Learning Gatsby
 

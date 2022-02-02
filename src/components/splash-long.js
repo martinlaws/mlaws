@@ -175,7 +175,7 @@ function SplashLong() {
               instagram
             </StyledA>{" "}
             but can most reliably be reached by email at{" "}
-            <StyledA href="mailto:mlaws@hey.com">mlaws@hey.com</StyledA>.
+            <StyledA href="mailto:hey@mlaws.ca">hey@mlaws.ca</StyledA>.
           </P>
         </article>
       </Main>
