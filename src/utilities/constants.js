@@ -90,6 +90,20 @@ export const writing = [
 
 export const projects = [
   {
+    title: "Custom apps in Shopify admin",
+    subhead: "shopify.dev",
+    date: "January 2021",
+    path: "https://shopify.dev/apps/auth/admin-app-access-tokens",
+    internalLink: false,
+  },
+  {
+    title: "Theme Kit Access app",
+    subhead: "Shopify App Store",
+    date: "July 2021",
+    path: "https://apps.shopify.com/theme-kit-access",
+    internalLink: false,
+  },
+  {
     title: "Shopify Commerce Awards 2020",
     subhead: "shopify.com/commerce-awards",
     date: "December 2020",
@@ -158,9 +172,33 @@ export const social = [
     path: "mailto:hey@mlaws.ca",
     internalLink: false,
   },
+  {
+    title: "opensea",
+    subhead: "mlaws",
+    path: "https://opensea.io/mlaws",
+    internalLink: false,
+  },
 ]
 
 export const currentlyReading  = [
+  {
+    title: "Resilient Management",
+    subhead: "Lara Hogan",
+    path: "https://resilient-management.com",
+    internalLink: false,
+  },
+  {
+    title: "How to Begin",
+    subhead: "Michael Bungay Stainer",
+    path: "https://www.goodreads.com/book/show/59606757-how-to-begin",
+    internalLink: false,
+  },
+  {
+    title: "Wanting: The Power of Mimetic Desire in Everyday Life",
+    subhead: "Luke Burgis",
+    path: "https://www.goodreads.com/book/show/54860444-wanting",
+    internalLink: false,
+  },
   {
     title: "Eat a Peach",
     subhead: "David Chang",
@@ -174,9 +212,9 @@ export const currentlyReading  = [
     internalLink: false,
   },
   {
-    title: "The Hellfire Club",
-    subhead: "Jake Tapper",
-    path: "https://www.goodreads.com/book/show/34329347-the-hellfire-club",
+    title: "The Opinionated Guide to React",
+    subhead: "Sara Vieira",
+    path: "https://opinionatedreact.com",
     internalLink: false,
   },
 ]
@@ -249,6 +287,18 @@ export const recentlyRead = [
     title: "A Promised Land",
     subhead: "Barack Obama",
     path: "https://www.goodreads.com/book/show/55361205-a-promised-land",
+    internalLink: false,
+  },
+  {
+    title: "The Hellfire Club",
+    subhead: "Jake Tapper",
+    path: "https://www.goodreads.com/book/show/34329347-the-hellfire-club",
+    internalLink: false,
+  },
+  {
+    title: "'Indian' in the Cabinet: Speaking Truth to Power",
+    subhead: "Jody Wilson-Raybould",
+    path: "https://www.goodreads.com/book/show/57355107-indian-in-the-cabinet",
     internalLink: false,
   },
 ]
