@@ -154,8 +154,8 @@ export const social = [
   },
   {
     title: "email",
-    subhead: "mlaws@hey.com",
-    path: "mailto:mlaws@hey.com",
+    subhead: "hey@mlaws.ca",
+    path: "mailto:hey@mlaws.ca",
     internalLink: false,
   },
 ]
