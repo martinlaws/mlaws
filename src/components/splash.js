@@ -61,7 +61,7 @@ function Splash() {
           <P>
             I'm a software development manager @{" "}
             <StyledA
-              href="https://www.shopify.com/"
+              href="https://shopify.dev"
               target="_blank"
               rel="noopener noreferrer"
             >

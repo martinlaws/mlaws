@@ -66,7 +66,7 @@ function SplashLong() {
             </H1>
           </BioSection>
           <P>
-            I'm a software development manager, design thinker,{" "}
+            I'm a design thinker, developer, manager,{" "}
             <StyledLink to="/maya">dog father</StyledLink>, coffee snob, LEGO
             enthusiast, and{" "}
             <StyledA
@@ -80,16 +80,24 @@ function SplashLong() {
             player.
           </P>
           <P>
-           I work as a Development Manager at{" "}
+           I work as a dev manager at{" "}
             <StyledA
               href="https://www.shopify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Shopify{" "}
-            </StyledA> 
-             where I lead teams building powerful, performant, and inclusive experiences for developers. Learn more (and see my work in the wild)
+              Shopify
+            </StyledA> {" "}
+             where I lead the App Developer Experience team. We build powerful, performant, and inclusive tooling for developers. You can find my work in the wild
             at{" "}
+            <StyledA
+              href="https://shopify.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              shopify.dev
+            </StyledA>{" "}
+            and{" "}
             <StyledA
               href="https://www.shopify.com/partners"
               target="_blank"
