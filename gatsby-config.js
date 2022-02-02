@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Martin Laws`,
-    description: `Development Manager, design thinker, dog dad.`,
+    description: `Martin Laws | Development Manager, design thinker, dog dad.`,
     author: `@martinlaws`,
     url: "https://mlaws.ca",
     image: "/images/martin.png",
